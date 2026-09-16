@@ -1,0 +1,18 @@
+`timescale 1ns/100ps
+module Program_Rom(
+	input	logic [31:0] Rom_addr,
+	output	logic [31:0] Rom_data
+);    
+  
+    always_comb begin
+        case (Rom_addr)
+			32'h0  : Rom_data = 32'hffb00093;	//addi	x1, x0, -5	
+			32'h4  : Rom_data = 32'h00100113;	//addi	x2, x0, 1
+			32'h8  : Rom_data = 32'h00602193;	//slti	x3, x0, 6 
+			32'hc  : Rom_data = 32'h0060b213;	//sltiu	x4, x1, 6 
+			32'h10 : Rom_data = 32'h7ff17293;	//andi  x5, x2, 2047
+            default: Rom_data = 32'h00000013;	//NOP
+        endcase
+    end
+endmodule
+

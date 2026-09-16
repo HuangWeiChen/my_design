@@ -1,0 +1,142 @@
+module alu(
+	input logic clk,
+	input logic rst,
+	output logic [5:0]w
+	);
+	
+	typedef enum {T0,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10} state;
+	state ns,ps;
+	
+	logic cnt,load_w;
+	logic [5:0]b,s;
+	logic [1:0]op;
+	
+	always_ff@(posedge clk)
+	begin
+		if(rst)		b <=  6'b0000000;
+		else if (cnt)	b <=  b + 1;
+	end
+	
+	always_ff@(posedge clk)
+	begin
+		if(rst)		ps <= #1 T0;
+		else ps <= ns;
+	end
+	
+	always_ff@(posedge clk)
+	begin
+		if(rst)		w <=  6'b000000;
+		else if (load_w)	w <=  s;
+	end
+	
+	always_comb
+	begin
+		case(op)
+			0: s = w + b;
+			1: s = w - b;
+			2: s = w * b;
+			3: s = w / b;
+		endcase
+	end
+	
+	always_comb
+	begin
+		load_w = 0; 
+		cnt = 0; 
+		op = 0;
+		ns = T0;
+		case(ps)
+			T0:
+			begin
+				cnt = 1;
+				load_w = 1;
+				op = 0;
+				ns = T1;
+			end
+			T1:
+			begin
+				cnt = 1;
+				load_w = 1;
+				op = 0;
+				ns = T2;
+			end
+			T2:
+			begin
+				cnt = 1;
+				load_w = 1;
+				op = 0;
+				ns = T3;
+			end
+			T3:
+			begin
+				cnt = 1;
+				load_w = 1;
+				op = 1;
+				ns = T4;
+			end
+			T4:
+			begin
+				cnt = 1;
+				load_w = 1;
+				op = 0;
+				ns = T5;
+			end
+			T5:
+			begin
+				cnt = 1;
+				load_w = 1;
+				op = 2;
+				ns = T6;
+			end
+			T6:
+			begin
+				cnt = 1;
+				load_w = 1;
+				op = 1;
+				ns = T7;
+			end
+			T7:
+			begin
+				cnt = 1;
+				load_w = 1;
+				op = 3;
+				ns = T8;
+			end
+			T8:
+			begin
+				cnt = 1;
+				load_w = 1;
+				op = 0;
+				ns = T9;
+			end
+			T9:
+			begin
+				ns = T10;
+			end
+			T10:
+				ns = T10;
+		endcase
+	end
+	
+endmodule
+//module testbench;
+//
+//
+//	logic clk;
+//	logic rst;
+//	logic [5:0]w;
+//	
+//
+//alu a1(
+//	.clk(clk),
+//	.rst(rst),
+//	.w(w)
+//	);
+//
+//	always #10 clk = ~clk;
+//	initial begin
+//		clk = 0; rst = 1; w = 0;
+//		#40 rst = 0;
+//		#1000 $stop;
+//	end
+//endmodule

@@ -1,0 +1,229 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/user/Downloads/DE0_CV/simulation/modelsim
+valu
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1764832573
+!i10b 1
+!s100 h3kWk`dI43cn;hfLR:Af?2
+IdbJeBHG^90P18EV9<>KaO2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 alu_sv_unit
+S1
+R0
+w1763019164
+8../../design/alu.sv
+F../../design/alu.sv
+L0 2
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1764832573.000000
+!s107 ../../design/alu.sv|
+!s90 -reportprogress|300|../../design/alu.sv|
+!i113 1
+Z6 tCvgOpt 0
+vDE0_CV
+R1
+R2
+!i10b 1
+!s100 DA4_e93cd?36bBgDDinLj1
+I^INlMk2Ng`@f2Lba4:7BY0
+R3
+!s105 DE0_CV_sv_unit
+S1
+R0
+w1763629192
+8../../design/DE0_CV.sv
+F../../design/DE0_CV.sv
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../../design/DE0_CV.sv|
+!s90 -reportprogress|300|../../design/DE0_CV.sv|
+!i113 1
+R6
+n@d@e0_@c@v
+vdiv
+R1
+Z7 !s110 1764831828
+!i10b 1
+!s100 CASKUcBm;EEOh96D5PcU31
+I`1UNk?Z]<19inV42O]:K81
+R3
+!s105 div_sv_unit
+S1
+R0
+w1764831800
+8C:/Users/user/Downloads/DE0_CV/design/div.sv
+FC:/Users/user/Downloads/DE0_CV/design/div.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z8 !s108 1764831828.000000
+!s107 C:/Users/user/Downloads/DE0_CV/design/div.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/user/Downloads/DE0_CV/design|C:/Users/user/Downloads/DE0_CV/design/div.sv|
+!i113 1
+Z9 o-sv -work work
+Z10 !s92 -sv -work work +incdir+C:/Users/user/Downloads/DE0_CV/design
+R6
+vLSU
+R1
+Z11 !s110 1764831829
+!i10b 1
+!s100 jVlLiJQmPJ=mLK1Qo3[Y=2
+IIIAE7:_S6ohea8LfT[J=[1
+R3
+!s105 LSU_sv_unit
+S1
+R0
+w1764230802
+8C:/Users/user/Downloads/DE0_CV/design/LSU.sv
+FC:/Users/user/Downloads/DE0_CV/design/LSU.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1764831829.000000
+!s107 C:/Users/user/Downloads/DE0_CV/design/LSU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/user/Downloads/DE0_CV/design|C:/Users/user/Downloads/DE0_CV/design/LSU.sv|
+!i113 1
+R9
+R10
+R6
+n@l@s@u
+vmul
+R1
+R7
+!i10b 1
+!s100 o?NWa>Q>QNHH<<FcTPPh@1
+IGbhBOh<ok_fjPe?MfFb7Y1
+R3
+!s105 mul_sv_unit
+S1
+R0
+w1764831759
+8C:/Users/user/Downloads/DE0_CV/design/mul.sv
+FC:/Users/user/Downloads/DE0_CV/design/mul.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/user/Downloads/DE0_CV/design/mul.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/user/Downloads/DE0_CV/design|C:/Users/user/Downloads/DE0_CV/design/mul.sv|
+!i113 1
+R9
+R10
+R6
+vProgram_Rom
+R1
+R2
+!i10b 1
+!s100 mbTQPef3g@AmQ?Uz>U>B^1
+IezhPmEBFeL@5hP^fEToK10
+R3
+!s105 Program_Rom_sv_unit
+S1
+R0
+w1764831713
+8../../design/Program_Rom.sv
+F../../design/Program_Rom.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../../design/Program_Rom.sv|
+!s90 -reportprogress|300|../../design/Program_Rom.sv|
+!i113 1
+R6
+n@program_@rom
+vRAM
+R1
+R11
+!i10b 1
+!s100 oDUACcPV6o2BQUjHdOX^b3
+Iagf?iG8UD=al7GmnUM>A<1
+R3
+!s105 RAM_sv_unit
+S1
+R0
+w1764231472
+8C:/Users/user/Downloads/DE0_CV/design/RAM.sv
+FC:/Users/user/Downloads/DE0_CV/design/RAM.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/user/Downloads/DE0_CV/design/RAM.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/user/Downloads/DE0_CV/design|C:/Users/user/Downloads/DE0_CV/design/RAM.sv|
+!i113 1
+R9
+R10
+R6
+n@r@a@m
+vrisc_v
+R1
+R2
+!i10b 1
+!s100 36>z6fjRf3;lAY;TRWia@3
+IC@B9IE]PJYogBL^FKAm8T1
+R3
+!s105 risc_v_sv_unit
+S1
+R0
+w1764832566
+8../../design/risc_v.sv
+F../../design/risc_v.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../../design/risc_v.sv|
+!s90 -reportprogress|300|../../design/risc_v.sv|
+!i113 1
+R6
+vtestbench
+R1
+!s110 1764832572
+!i10b 1
+!s100 FBL=3io1KaaST=8DbEUJo0
+II44h@DBO10;0jSBcG[4JE1
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1763740058
+8../tb/testbench.sv
+F../tb/testbench.sv
+L0 2
+R4
+r1
+!s85 0
+31
+!s108 1764832572.000000
+!s107 ../tb/testbench.sv|
+!s90 -reportprogress|300|../tb/testbench.sv|
+!i113 1
+R6

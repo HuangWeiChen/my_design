@@ -1,0 +1,145 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "regs_31[0]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[1]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[2]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[3]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[4]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[5]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[6]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[7]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[8]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[9]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[10]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[11]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[12]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[13]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[14]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[15]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[16]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[17]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[18]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[19]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[20]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[21]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[22]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[23]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[24]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[25]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[26]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[27]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[28]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[29]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[30]",
+					"strict" : false
+				},
+				{
+					"name" : "regs_31[31]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

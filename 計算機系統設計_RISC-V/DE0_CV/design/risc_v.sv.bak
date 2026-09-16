@@ -1,0 +1,54 @@
+`timescale 1ns/100ps
+
+module risc_v(
+	input	logic clk,
+	output	logic rst
+);    
+  
+	logic [31:0] pc;
+	logic [31:0] pc_next_;
+	logic rst_pc_;
+	assign pc = pc+4;//加法器
+	
+	always_ff@(posedge clk)//program counter
+	begin
+		if(rst|rst_ps_)
+			pc<= 32'b0;
+		else
+			pc <= pc_next_;
+	end
+	
+	logic [31:0] inst_;
+	Program_Rom Program_Rom_1(
+		.Rom_addr	(pc),
+		.Rom_data	(inst_),
+	);
+	
+	logic [31:0] inst_r;
+	logic flush_IFID_r;
+	always_ff@(posedge clk)// IF/ID
+   begin
+		if(rst)
+			inst_r <= 32'h13;
+		else if(flush_IFID_r)
+			inst_r <= 32'h13;
+		else
+			inst_r <= inst_;
+	end
+	
+	logic [6:0] opcode,funct7_;
+	logic [4:0] addr_rd_;
+	logic [2:0] funct3_;
+	logic [4:0] addr_rs1,addr_rs2;
+	logic [31:0] imm_;
+	
+	assign opcode = inst_r[:];
+	assign addr_rd_
+	assign funct3_
+	assign addr_rs1
+	assign addr_rs2
+	assign funct7_
+	assign imm_
+	
+endmodule
+

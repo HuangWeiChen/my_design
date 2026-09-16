@@ -1,0 +1,11 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/301/Downloads/DE0_CV/DE0_CV/DE0_CV/design {C:/Users/301/Downloads/DE0_CV/DE0_CV/DE0_CV/design/Program_Rom.sv}
+vlog -sv -work work +incdir+C:/Users/301/Downloads/DE0_CV/DE0_CV/DE0_CV/design {C:/Users/301/Downloads/DE0_CV/DE0_CV/DE0_CV/design/risc_v.sv}
+vlog -sv -work work +incdir+C:/Users/301/Downloads/DE0_CV/DE0_CV/DE0_CV/design {C:/Users/301/Downloads/DE0_CV/DE0_CV/DE0_CV/design/alu.sv}
+

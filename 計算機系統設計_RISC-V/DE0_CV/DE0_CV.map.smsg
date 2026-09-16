@@ -1,0 +1,6 @@
+Info (10281): Verilog HDL Declaration information at DE0_CV.sv(28): object "HEX0" differs only in case from object "hex0" in the same scope File: C:/Users/user/Downloads/DE0_CV/design/DE0_CV.sv Line: 28
+Info (10281): Verilog HDL Declaration information at DE0_CV.sv(29): object "HEX1" differs only in case from object "hex1" in the same scope File: C:/Users/user/Downloads/DE0_CV/design/DE0_CV.sv Line: 29
+Info (10281): Verilog HDL Declaration information at DE0_CV.sv(30): object "HEX2" differs only in case from object "hex2" in the same scope File: C:/Users/user/Downloads/DE0_CV/design/DE0_CV.sv Line: 30
+Info (10281): Verilog HDL Declaration information at DE0_CV.sv(31): object "HEX3" differs only in case from object "hex3" in the same scope File: C:/Users/user/Downloads/DE0_CV/design/DE0_CV.sv Line: 31
+Info (10281): Verilog HDL Declaration information at DE0_CV.sv(32): object "HEX4" differs only in case from object "hex4" in the same scope File: C:/Users/user/Downloads/DE0_CV/design/DE0_CV.sv Line: 32
+Info (10281): Verilog HDL Declaration information at DE0_CV.sv(33): object "HEX5" differs only in case from object "hex5" in the same scope File: C:/Users/user/Downloads/DE0_CV/design/DE0_CV.sv Line: 33

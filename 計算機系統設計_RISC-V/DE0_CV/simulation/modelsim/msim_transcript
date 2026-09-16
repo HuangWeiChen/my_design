@@ -1,0 +1,1318 @@
+# Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do DE0_CV_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/user/Downloads/DE0_CV/design {C:/Users/user/Downloads/DE0_CV/design/mul.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:03:48 on Dec 04,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/user/Downloads/DE0_CV/design" C:/Users/user/Downloads/DE0_CV/design/mul.sv 
+# -- Compiling module mul
+# 
+# Top level modules:
+# 	mul
+# End time: 15:03:48 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/user/Downloads/DE0_CV/design {C:/Users/user/Downloads/DE0_CV/design/div.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:03:48 on Dec 04,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/user/Downloads/DE0_CV/design" C:/Users/user/Downloads/DE0_CV/design/div.sv 
+# -- Compiling module div
+# 
+# Top level modules:
+# 	div
+# End time: 15:03:48 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/user/Downloads/DE0_CV/design {C:/Users/user/Downloads/DE0_CV/design/RAM.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:03:48 on Dec 04,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/user/Downloads/DE0_CV/design" C:/Users/user/Downloads/DE0_CV/design/RAM.sv 
+# -- Compiling module RAM
+# 
+# Top level modules:
+# 	RAM
+# End time: 15:03:49 on Dec 04,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/user/Downloads/DE0_CV/design {C:/Users/user/Downloads/DE0_CV/design/LSU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:03:49 on Dec 04,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/user/Downloads/DE0_CV/design" C:/Users/user/Downloads/DE0_CV/design/LSU.sv 
+# -- Compiling module LSU
+# 
+# Top level modules:
+# 	LSU
+# End time: 15:03:49 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/user/Downloads/DE0_CV/design {C:/Users/user/Downloads/DE0_CV/design/Program_Rom.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:03:49 on Dec 04,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/user/Downloads/DE0_CV/design" C:/Users/user/Downloads/DE0_CV/design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 15:03:49 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/user/Downloads/DE0_CV/design {C:/Users/user/Downloads/DE0_CV/design/risc_v.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:03:49 on Dec 04,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/user/Downloads/DE0_CV/design" C:/Users/user/Downloads/DE0_CV/design/risc_v.sv 
+# -- Compiling module risc_v
+# ** Warning: C:/Users/user/Downloads/DE0_CV/design/risc_v.sv(367): (vlog-2584) there is a matching case item hence not unique 
+# 
+# Top level modules:
+# 	risc_v
+# End time: 15:03:49 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+C:/Users/user/Downloads/DE0_CV/design {C:/Users/user/Downloads/DE0_CV/design/alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:03:49 on Dec 04,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/user/Downloads/DE0_CV/design" C:/Users/user/Downloads/DE0_CV/design/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 15:03:49 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:03:53 on Dec 04,2025
+# vlog -reportprogress 300 ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:03:54 on Dec 04,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:03:54 on Dec 04,2025
+# vlog -reportprogress 300 ../../design/risc_v.sv 
+# -- Compiling module risc_v
+# ** Warning: ../../design/risc_v.sv(367): (vlog-2584) there is a matching case item hence not unique 
+# 
+# Top level modules:
+# 	risc_v
+# End time: 15:03:54 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:03:54 on Dec 04,2025
+# vlog -reportprogress 300 ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 15:03:54 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:03:54 on Dec 04,2025
+# vlog -reportprogress 300 ../../design/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 15:03:54 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:03:54 on Dec 04,2025
+# vlog -reportprogress 300 ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 15:03:54 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 15:03:57 on Dec 04,2025
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.risc_v
+# Loading work.Program_Rom
+# Loading work.alu
+# Loading work.mul
+# Loading work.div
+# Loading work.LSU
+# Loading work.RAM
+# ** Warning: (vsim-3017) ../tb/testbench.sv(8): [TFMPC] - Too few port connections. Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1 File: ../../design/risc_v.sv
+# ** Warning: (vsim-3722) ../tb/testbench.sv(8): [TFMPC] - Missing connection for port 'regs_31'.
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(49): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(49): No condition is true in the unique/priority if/case statement.
+#    Time: 10 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 10 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(183): No condition is true in the unique/priority if/case statement.
+#    Time: 10 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 10 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 130 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 150 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 150 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 150 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 170 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 170 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 170 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 190 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 190 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 190 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 190 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 190 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 210 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 210 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 210 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 210 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 210 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 230 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 250 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 250 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 250 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 250 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 270 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 270 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 270 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 290 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 290 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 290 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 310 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 310 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 310 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 330 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 330 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 330 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 350 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 370 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 390 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 410 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 410 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 410 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 410 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 410 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 410 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 430 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 430 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 430 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 450 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 450 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 450 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 450 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 450 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 470 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 470 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 490 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 510 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 550 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 570 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 590 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 630 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 650 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 650 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 650 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 650 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 670 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 690 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 710 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 710 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 710 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 730 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 770 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 810 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 830 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 850 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 850 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 850 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 850 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 850 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 870 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 890 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 910 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 910 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 910 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 970 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 990 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1010 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1030 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1030 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1050 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1070 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1070 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1070 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1090 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1110 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1130 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1150 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1170 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1190 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1210 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1230 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1230 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1250 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1250 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1270 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1290 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1290 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1310 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1310 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1310 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1310 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1330 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1330 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1330 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1350 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1350 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1350 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1370 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1370 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1370 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1390 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 1390 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1390 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1390 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1390 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1390 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 1390 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 1390 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1410 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1410 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1410 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1410 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1430 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1430 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1430 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1430 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1430 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1450 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 1450 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1450 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1450 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1450 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1470 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 1470 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1470 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 1470 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1490 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1510 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Note: $stop    : ../tb/testbench.sv(18)
+#    Time: 20040 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 18
+add wave -position insertpoint  \
+sim:/testbench/a1/imm_
+add wave -position insertpoint  \
+sim:/testbench/a1/ps
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/user/Downloads/DE0_CV/simulation/modelsim/wave.do
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:35 on Dec 04,2025
+# vlog -reportprogress 300 ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:13:35 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:36 on Dec 04,2025
+# vlog -reportprogress 300 ../../design/risc_v.sv 
+# -- Compiling module risc_v
+# ** Warning: ../../design/risc_v.sv(369): (vlog-2584) there is a matching case item hence not unique 
+# 
+# Top level modules:
+# 	risc_v
+# End time: 15:13:36 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:36 on Dec 04,2025
+# vlog -reportprogress 300 ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 15:13:36 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:36 on Dec 04,2025
+# vlog -reportprogress 300 ../../design/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 15:13:36 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:36 on Dec 04,2025
+# vlog -reportprogress 300 ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 15:13:36 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 15:13:40 on Dec 04,2025, Elapsed time: 0:09:43
+# Errors: 0, Warnings: 184
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 15:13:40 on Dec 04,2025
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.risc_v
+# Loading work.Program_Rom
+# Loading work.alu
+# Loading work.mul
+# Loading work.div
+# Loading work.LSU
+# Loading work.RAM
+# ** Warning: (vsim-3017) ../tb/testbench.sv(8): [TFMPC] - Too few port connections. Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1 File: ../../design/risc_v.sv
+# ** Warning: (vsim-3722) ../tb/testbench.sv(8): [TFMPC] - Missing connection for port 'regs_31'.
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(49): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(49): No condition is true in the unique/priority if/case statement.
+#    Time: 10 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 10 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(183): No condition is true in the unique/priority if/case statement.
+#    Time: 10 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 10 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 130 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 150 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 150 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 150 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 170 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 170 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 170 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 190 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 190 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 190 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 190 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 190 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 210 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 210 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 210 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 210 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 210 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 230 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 250 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 250 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 250 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 250 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 270 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 270 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 270 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 290 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 290 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 290 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 310 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 310 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 310 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 330 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 330 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 330 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 350 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 370 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 390 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 410 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 410 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 410 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 410 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 410 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 410 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 430 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 430 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 430 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 450 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 450 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 450 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 450 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 450 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 470 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 470 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 490 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 510 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 550 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 570 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 590 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 630 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 650 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 650 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 650 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 650 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 670 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 690 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 710 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 710 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 710 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 730 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 770 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 810 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 830 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 850 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 850 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 850 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 850 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 850 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 870 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 890 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 910 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 910 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 910 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 970 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 990 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1010 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1030 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1030 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1050 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1070 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1070 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1070 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1090 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1110 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1130 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1150 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1170 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1190 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1210 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1230 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1230 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1250 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1250 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1270 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1290 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1290 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1310 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1310 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1310 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1310 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1330 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1330 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1330 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1350 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1350 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1350 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1370 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1370 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1370 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1390 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 1390 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1390 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1390 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1390 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1410 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1410 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1410 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1410 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1430 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1430 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1430 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1430 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1450 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 1450 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1450 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8360) ../../design/risc_v.sv(210): The if/case statement is not unique.
+#    Time: 1450 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1450 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1470 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 1470 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1470 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1490 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1510 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Note: $stop    : ../tb/testbench.sv(18)
+#    Time: 20040 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 18
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:16:12 on Dec 04,2025
+# vlog -reportprogress 300 ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:16:13 on Dec 04,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:16:13 on Dec 04,2025
+# vlog -reportprogress 300 ../../design/risc_v.sv 
+# -- Compiling module risc_v
+# 
+# Top level modules:
+# 	risc_v
+# End time: 15:16:13 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:16:13 on Dec 04,2025
+# vlog -reportprogress 300 ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 15:16:13 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:16:13 on Dec 04,2025
+# vlog -reportprogress 300 ../../design/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 15:16:13 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:16:13 on Dec 04,2025
+# vlog -reportprogress 300 ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 15:16:13 on Dec 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 15:16:15 on Dec 04,2025, Elapsed time: 0:02:35
+# Errors: 0, Warnings: 178
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 15:16:15 on Dec 04,2025
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.risc_v
+# Loading work.Program_Rom
+# Loading work.alu
+# Loading work.mul
+# Loading work.div
+# Loading work.LSU
+# Loading work.RAM
+# ** Warning: (vsim-3017) ../tb/testbench.sv(8): [TFMPC] - Too few port connections. Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1 File: ../../design/risc_v.sv
+# ** Warning: (vsim-3722) ../tb/testbench.sv(8): [TFMPC] - Missing connection for port 'regs_31'.
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(49): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(49): No condition is true in the unique/priority if/case statement.
+#    Time: 10 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 10 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(183): No condition is true in the unique/priority if/case statement.
+#    Time: 10 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 10 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 130 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 150 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 150 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 150 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 170 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 170 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 170 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 190 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 190 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 190 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 190 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 190 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 210 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 210 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 210 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 210 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 210 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 230 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 250 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 250 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 250 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 250 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 270 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 270 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 290 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 290 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 310 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 310 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 330 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 330 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 350 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 410 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 410 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 410 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 410 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 410 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 430 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 430 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 450 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 450 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 450 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 450 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 470 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 470 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 490 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 510 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 550 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 570 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 590 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 630 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 650 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 650 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 650 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 650 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 670 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 690 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 710 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 710 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 710 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 730 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 770 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 810 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 830 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 850 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 850 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 850 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 850 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 850 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 870 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 890 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 910 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 910 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 970 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 990 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1010 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1030 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1050 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1070 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1070 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1070 ps  Iteration: 3  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1090 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1110 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1130 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1150 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1170 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1190 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1210 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1230 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1230 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1250 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1250 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1270 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1290 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1290 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1310 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1310 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1310 ps  Iteration: 4  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1330 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1330 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1350 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1350 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1370 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1370 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1390 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 1390 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1390 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1390 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1410 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1410 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1410 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1430 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1430 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1430 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1450 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 1450 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1450 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) ../../design/risc_v.sv(115): No condition is true in the unique/priority if/case statement.
+#    Time: 1450 ps  Iteration: 2  Instance: /testbench/a1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(105): No condition is true in the unique/priority if/case statement.
+#    Time: 1470 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/LSU.sv(181): No condition is true in the unique/priority if/case statement.
+#    Time: 1470 ps  Iteration: 2  Instance: /testbench/a1/LSU1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/mul.sv(17): No condition is true in the unique/priority if/case statement.
+#    Time: 1470 ps  Iteration: 2  Instance: /testbench/a1/mul1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1490 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Warning: (vsim-8315) C:/Users/user/Downloads/DE0_CV/design/div.sv(15): No condition is true in the unique/priority if/case statement.
+#    Time: 1510 ps  Iteration: 2  Instance: /testbench/a1/div1
+# ** Note: $stop    : ../tb/testbench.sv(18)
+#    Time: 20040 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 18
+# End time: 15:19:24 on Dec 04,2025, Elapsed time: 0:03:09
+# Errors: 0, Warnings: 158
