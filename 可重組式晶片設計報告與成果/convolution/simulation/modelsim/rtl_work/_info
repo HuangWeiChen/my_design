@@ -1,0 +1,144 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/CNN/simulation/modelsim
+vCNN
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1781052986
+!i10b 1
+!s100 06Eo@SG5M5Xd5W8njid7R0
+I_3;?4c;;X=M^<ObIHCC>m3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 CNN_sv_unit
+S1
+R0
+w1779249834
+8../../design/CNN.sv
+F../../design/CNN.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1781052986.000000
+!s107 ../../design/CNN.sv|
+!s90 -reportprogress|300|../../design/CNN.sv|
+!i113 1
+Z6 tCvgOpt 0
+n@c@n@n
+vDE0_CV
+R1
+R2
+!i10b 1
+!s100 c8C1MKjOR?8BQh>N2?]dH0
+IEX`zlN0;:_ViCM8^mCVVo0
+R3
+!s105 DE0_CV_sv_unit
+S1
+R0
+w1778824934
+8../../design/DE0_CV.sv
+F../../design/DE0_CV.sv
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../../design/DE0_CV.sv|
+!s90 -reportprogress|300|../../design/DE0_CV.sv|
+!i113 1
+R6
+n@d@e0_@c@v
+vfifo
+R2
+!i10b 1
+!s100 16cJNciN>be3i=^Zmz6Wb1
+IAa2Nl9RdXSdYn4gALzchA0
+R3
+R0
+w1778823982
+8../../fifo.v
+F../../fifo.v
+L0 40
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../../fifo.v|
+!s90 -reportprogress|300|../../fifo.v|
+!i113 1
+R6
+vpll
+!s110 1781052981
+!i10b 1
+!s100 C2Qf6MBjW7J[R1U=HWzC40
+IJE[TlkIlI@h=R5UfllCOM0
+R3
+R0
+w1775618772
+8E:/CNN/pll_sim/pll.vo
+FE:/CNN/pll_sim/pll.vo
+L0 32
+R4
+r1
+!s85 0
+31
+!s108 1781052980.000000
+!s107 E:/CNN/pll_sim/pll.vo|
+!s90 -reportprogress|300|E:/CNN/pll_sim/pll.vo|
+!i113 1
+R6
+vspi_rx
+R1
+R2
+!i10b 1
+!s100 aGJTf32:joQY6V9N5EI:21
+IK@bDVNS6cF5WGV:8K:D791
+R3
+!s105 spi_rx_sv_unit
+S1
+R0
+w1779243242
+8../../design/spi_rx.sv
+F../../design/spi_rx.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../../design/spi_rx.sv|
+!s90 -reportprogress|300|../../design/spi_rx.sv|
+!i113 1
+R6
+vtestbench
+R1
+R2
+!i10b 1
+!s100 3^f_>_hCL6dUY:5AzW09C1
+Il=e>PDm97gko`QYTH1TZV2
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1778824270
+8../tb/testbench.sv
+F../tb/testbench.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../tb/testbench.sv|
+!s90 -reportprogress|300|../tb/testbench.sv|
+!i113 1
+R6

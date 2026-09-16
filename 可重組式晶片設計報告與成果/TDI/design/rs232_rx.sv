@@ -1,0 +1,299 @@
+module rs232_rx(
+	input logic clk,
+	input logic rst,
+	input logic tx_ack,
+	input logic rx,
+	output logic [7:0]addr,
+	output logic [7:0]data,
+	output logic write,
+	output logic tx_req,
+	output logic [1:0]tx_cnt
+	);
+	
+
+	//bit_counter
+	logic rst_bit_cnt;
+	logic bit_flag;
+	logic [5:0]bit_cnt;
+	
+	always_ff@(posedge clk)
+	begin
+		if(~rst || rst_bit_cnt)
+			bit_cnt <= 0;
+		else if(bit_flag)
+			bit_cnt <= bit_cnt + 1'b1;
+	end
+	
+	
+	//baud_counter
+	logic rst_baud_cnt;
+	logic [15:0]baud_cnt;
+	
+	always_ff@(posedge clk)
+	begin
+		if(~rst || rst_baud_cnt) 
+			baud_cnt <= 0;
+		else
+			baud_cnt <= baud_cnt + 1'b1;
+	end
+	
+	//pkg_counter
+	logic [2:0] pkg_cnt;
+	logic rst_pkg_cnt;
+	logic rx_finish;
+	
+	always_ff@(posedge clk)
+	begin
+		if(~rst || rst_pkg_cnt) 
+			pkg_cnt <= 0;
+		else if(rx_finish)
+			pkg_cnt <= pkg_cnt + 1'b1;
+	end
+	
+	//Neg_Edge Detector
+	logic rx_s;
+	logic rx_d;
+	logic rx_neg;
+	
+	always_ff@(posedge clk)
+	begin
+		if(~rst) begin
+			rx_s			<= 1'b1;
+			rx_d			<= 1'b1;
+			rx_neg		<= 1'b0;
+		end
+		else begin
+			{rx_d, rx_s} 	<= {rx_s, rx};
+			rx_neg 			<= ~rx_s & rx_d;
+		end
+	end
+	
+	//assign rx_neg = ~rx_s & rx_d;
+	
+	//baud_cnt_compare
+	logic baud_cnt_max;
+	logic baud_cnt_half;
+	assign baud_cnt_max  = (baud_cnt == 1301) ? 1 : 0;
+	assign baud_cnt_half = (baud_cnt == 650) ? 1 : 0;
+	
+	//bit_shift_register
+	logic [7:0]rx_data;
+	
+	always_ff@(posedge clk)
+	begin
+		if(~rst) 
+			rx_data	<= 0;
+		else if(bit_flag)
+			rx_data <= {rx,rx_data[7:1]};
+	end   
+	
+	//pkg_shift_register
+	logic [7:0]head;
+	logic [7:0]addr1;
+	logic [7:0]addr2;
+	logic [7:0]data1;
+	logic [7:0]data2;
+	logic [7:0]r_w;
+	logic [7:0]chk_sum;
+	logic [7:0]tail;
+	logic shift_pkg;
+	
+	always_ff@(posedge clk)
+	begin
+		if(~rst) begin
+			head		<=0;
+			addr1		<=0;
+			addr2		<=0;
+			data1		<=0;
+			data2		<=0;
+			r_w		<=0;
+			chk_sum	<=0;
+			tail		<=0;
+		end
+		else if(shift_pkg) begin
+			case(pkg_cnt)
+				0: head		<= rx_data;
+				1: addr1		<= rx_data;
+				2: addr2		<= rx_data;
+				3: data1		<= rx_data;
+				4: data2		<= rx_data;
+				5: r_w		<= rx_data;
+				6: chk_sum	<= rx_data;
+				7: tail		<= rx_data;
+			endcase
+		end
+	end
+	//check_cum_accumulator
+	logic add_chk_sum;
+	logic rst_chk_sum_acc;
+	logic [7:0]chk_sum_acc;
+	
+	always_ff@(posedge clk)
+	begin
+		if(~rst || rst_chk_sum_acc)
+			chk_sum_acc <= 0;
+		else if(add_chk_sum)
+			chk_sum_acc <= chk_sum_acc + rx_data;
+	end
+	
+	//TX_Counter
+	logic inc_tx_cnt;
+	logic rst_tx_cnt;
+
+	always_ff@(posedge clk)
+	begin
+		if(~rst || rst_tx_cnt)
+			tx_cnt <= 0;
+		else if(inc_tx_cnt)
+			tx_cnt <= tx_cnt + 1'b1;
+	end
+	//data addr
+	
+	typedef enum{ START, RX_START, NUM_BITS, RECEIVE, COMPLETE, RW_REG_F, TX_ACK_1,
+	TX_REQ_1, TX_ACK_2, TX_REQ_2, TX_ACK_3, TX_REQ_3, TX_ACK_4, TX_REQ_4 } FSM_STATE;
+	FSM_STATE fsm_ns,fsm_ps;
+	
+	always_ff@(posedge clk)
+	begin
+		if(~rst) begin
+			data <= 0;
+			addr <= 0;
+		end
+		else if(fsm_ps == COMPLETE && pkg_cnt == 5) begin
+			data = {data1[3:0], data2[3:0]};
+			addr = {addr1[3:0], addr2[3:0]};
+		end
+	end
+	
+	//FSM
+	
+	
+	always_ff@(posedge clk) begin
+        if(~rst)
+            fsm_ps      <= START;
+        else
+            fsm_ps      <= fsm_ns;
+   end
+	
+	always_comb 
+	begin
+		fsm_ns			 = fsm_ps;
+		rst_baud_cnt	 = 0;
+		bit_flag	 	 	 = 0;
+		rst_bit_cnt	  	 = 0;
+		rx_finish	 	 = 0;
+		rst_pkg_cnt	  	 = 0;
+		add_chk_sum  	 = 0;
+		rst_chk_sum_acc = 0;
+		write  	  	 	 = 0;
+		shift_pkg	 	 = 0;
+		inc_tx_cnt	 	 = 0;
+		rst_tx_cnt	  	 = 0;
+		tx_req 			 = 0;
+		case(fsm_ps)
+			START:
+			begin
+				rst_chk_sum_acc = 1;
+				fsm_ns = RX_START;
+			end
+			RX_START:
+			begin
+				if(rx_neg == 1)
+					fsm_ns = NUM_BITS;				
+			end
+			NUM_BITS:
+			begin
+				rst_baud_cnt = 1;
+				if(bit_cnt>8)
+					fsm_ns = COMPLETE;
+				else
+					fsm_ns = RECEIVE;
+			end
+			RECEIVE:
+			begin
+				if(baud_cnt_half == 1) 
+					bit_flag = 1;
+				else if(baud_cnt_max == 1)
+					fsm_ns = NUM_BITS;
+					
+			end
+			COMPLETE:
+			begin
+				rst_bit_cnt = 1;
+				rx_finish = 1;
+				shift_pkg = 1;
+				if(pkg_cnt == 7) begin
+					if(chk_sum == chk_sum_acc)
+						fsm_ns = RW_REG_F;
+					else
+						fsm_ns = RX_START;
+					rst_pkg_cnt = 1;
+					rst_chk_sum_acc = 1;
+						
+				end
+				else if(pkg_cnt<7) begin
+					if(pkg_cnt<6)
+						add_chk_sum = 1;
+					fsm_ns = RX_START;
+				end
+				else
+					fsm_ns = COMPLETE;
+			end
+			RW_REG_F:
+			begin
+				rst_tx_cnt = 1;
+				if(r_w[0]) begin
+					write = 1;
+					fsm_ns = RX_START;
+				end
+				else
+					fsm_ns = TX_REQ_1;
+					
+			end
+			TX_REQ_1:
+			begin
+				tx_req = 1;
+				fsm_ns = TX_ACK_1;
+			end
+			TX_ACK_1:
+			begin
+				if(tx_ack == 1)
+					fsm_ns = TX_REQ_2;
+			end
+			TX_REQ_2:
+			begin
+				tx_req = 1;
+				inc_tx_cnt = 1;
+				fsm_ns = TX_ACK_2;
+			end
+			TX_ACK_2:
+			begin
+				if(tx_ack == 1)
+					fsm_ns = TX_REQ_3;
+			end
+			TX_REQ_3:
+			begin
+				tx_req = 1;
+				inc_tx_cnt = 1;
+				fsm_ns = TX_ACK_3;
+			end
+			TX_ACK_3:
+			begin
+				if(tx_ack == 1)
+					fsm_ns = TX_REQ_4;
+			end
+			TX_REQ_4:
+			begin
+				tx_req = 1;
+				inc_tx_cnt = 1;
+				fsm_ns = TX_ACK_4;
+			end
+			TX_ACK_4:
+			begin
+				if(tx_ack == 1)
+					fsm_ns = RX_START;
+			end
+		endcase
+	end
+	
+endmodule

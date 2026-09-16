@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at testbench.sv(24): object "WRITE" differs only in case from object "write" in the same scope File: E:/CNN/simulation/tb/testbench.sv Line: 24
+Info (10281): Verilog HDL Declaration information at testbench.sv(25): object "READ" differs only in case from object "read" in the same scope File: E:/CNN/simulation/tb/testbench.sv Line: 25

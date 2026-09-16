@@ -1,0 +1,427 @@
+# Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do DE0_CV_run_msim_rtl_systemverilog.do
+# if ![file isdirectory DE0_CV_iputf_libs] {
+# 	file mkdir DE0_CV_iputf_libs
+# }
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+# 
+# 
+# vlog "C:/Users/user/Downloads/TDI/pll_sim/pll.vo"
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:42:09 on May 11,2026
+# vlog -reportprogress 300 C:/Users/user/Downloads/TDI/pll_sim/pll.vo 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 15:42:09 on May 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Downloads/TDI {C:/Users/user/Downloads/TDI/fifo.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:42:09 on May 11,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Downloads/TDI" C:/Users/user/Downloads/TDI/fifo.v 
+# -- Compiling module fifo
+# 
+# Top level modules:
+# 	fifo
+# End time: 15:42:09 on May 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/user/Downloads/TDI/design {C:/Users/user/Downloads/TDI/design/TDI.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:42:09 on May 11,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/user/Downloads/TDI/design" C:/Users/user/Downloads/TDI/design/TDI.sv 
+# -- Compiling module TDI
+# 
+# Top level modules:
+# 	TDI
+# End time: 15:42:09 on May 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/user/Downloads/TDI/design {C:/Users/user/Downloads/TDI/design/spi_rx.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:42:09 on May 11,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/user/Downloads/TDI/design" C:/Users/user/Downloads/TDI/design/spi_rx.sv 
+# -- Compiling module spi_rx
+# 
+# Top level modules:
+# 	spi_rx
+# End time: 15:42:09 on May 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:42:16 on May 11,2026
+# vlog -reportprogress 300 ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:42:16 on May 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:42:16 on May 11,2026
+# vlog -reportprogress 300 ../../design/TDI.sv 
+# -- Compiling module TDI
+# 
+# Top level modules:
+# 	TDI
+# End time: 15:42:16 on May 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:42:16 on May 11,2026
+# vlog -reportprogress 300 ../../design/spi_rx.sv 
+# -- Compiling module spi_rx
+# 
+# Top level modules:
+# 	spi_rx
+# End time: 15:42:16 on May 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:42:16 on May 11,2026
+# vlog -reportprogress 300 ../../fifo.v 
+# -- Compiling module fifo
+# 
+# Top level modules:
+# 	fifo
+# End time: 15:42:16 on May 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:42:16 on May 11,2026
+# vlog -reportprogress 300 ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 15:42:16 on May 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# vsim -voptargs=""+acc"" -L altera_mf_ver work.testbench 
+# Start time: 15:42:18 on May 11,2026
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.TDI
+# Loading work.spi_rx
+# Loading work.fifo
+# Loading altera_mf_ver.scfifo
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# ** Warning: (vsim-3015) ../../design/TDI.sv(36): [PCDPC] - Port size (12) does not match connection size (11) for port 'usedw'. The port definition is at: ../../fifo.v(50).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/fifo_1 File: ../../fifo.v
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# Correct: TDI_result.txt opened successfully!
+# Correct: TDI_test_data.txt opened successfully!
+# 
+# Line :   1    ff fd fa fe fe fd ff ff 
+# Line :   2    ff ff fe fc ff fb fe ff 
+# Line :   3    fc ff ff fa fa fd ff fc 
+# Line :   4    ff fd ff ff ff fb ff ff 
+# Line :   5    ff ff fb ff fe fa ff ff 
+# Line :   6    fe fe fb fa ff ff fc fc 
+# Line :   7    ff ff fb ff ff ff fe fa 
+# Line :   8    fd fa ff ff ff fc fd fe 
+# Line :   9    ff fc fd fe ff fb f9 fb 
+# Line :  10    f9 ff fe ff fb fd ff ff 
+# Line :  11    fd ff fb ff ff fa fb ff 
+# Line :  12    fa ff fd ff ff f9 ff ff 
+# Line :  13    ff ff fe f6 ff fb fa fa 
+# Line :  14    fd ff ff ff ff fb ff f5 
+# Line :  15    ff fc fe ff ff fb ff ff 
+# Line :  16    ff de e3 de e1 e6 de fe 
+# Line :  17    f4 ff fd ff fb f8 ff fd 
+# Line :  18    fa ff fa ff fa fd ff fc 
+# Line :  19    f7 ff f8 fa ff f4 ff ff 
+# Line :  20    fe fd f9 fa ff f7 f8 f7 
+# Line :  21    fa ff ff fb ff ff ff f1 
+# Line :  22    ff ff ff ff fe ff ff ff 
+# Line :  23    ff df e7 df dc e4 e0 fb 
+# Line :  24    e7 de e3 e1 dd e1 e2 e4 
+# Line :  25    ff ff fd ff fc ff ff f8 
+# Line :  26    fc ff f7 f7 ff f5 fa ff 
+# Line :  27    f9 fa f7 f6 fa f6 f4 f8 
+# Line :  28    fc ff ff f6 ff fb ff f4 
+# Line :  29    ff ff fb ff ff ff fa fc 
+# Line :  30    fe da e4 da d7 df e2 f6 
+# Line :  31    eb e0 e5 e4 e0 dd e4 e3 
+# Line :  32    e2 fa 00 df df ff fa de 
+# Line :  33    f7 fd f5 f7 fd f8 f7 ff 
+# Line :  34    f9 f5 fa f3 f7 f1 f3 f9 
+# Line :  35    fc fe fd f4 fe f7 fd f3 
+# Line :  36    ff ff fb fb ff ff f8 f8 
+# Line :  37    ff db e4 de d6 e1 e7 f3 
+# Line :  38    f0 df e7 e3 de de e0 de 
+# Line :  39    e1 f5 00 e2 e4 ff f9 de 
+# Line :  40    df ff ff e1 e4 00 fe e3 
+# Line :  41    fc f0 f6 ef f4 ec f2 f8 
+# Line :  42    fb fe fc f2 ff fb ff ee 
+# Line :  43    fb fc f9 f6 fc ff fc f9 
+# Line :  44    ff d6 e6 d9 d4 e6 e6 f0 
+# Line :  45    ee da eb e3 dc dc db df 
+# Line :  46    e2 f8 00 e4 e6 ff fe e1 
+# Line :  47    da ff ff de e0 05 fe e1 
+# Line :  48    dd e1 e6 e4 e7 e6 de de 
+# Line :  49    fc ff fb f4 fc ff ff ec 
+# Line :  50    fb fb f6 f5 fd ff fd fe 
+# Line :  51    ff d8 e9 dc d2 e5 e2 ec 
+# Line :  52    f0 d6 e8 e8 de d8 d8 dd 
+# Line :  53    e5 fd 00 df e1 fb ff e6 
+# Line :  54    d8 fa fc df e4 02 ff dd 
+# Line :  55    df e4 e5 e2 e2 e9 e2 da 
+# Line :  56    e4 00 de dd e2 e1 00 e6 
+# Line :  57    f8 ff f9 f2 f8 fc f9 fc 
+# Line :  58    ff d7 ed e0 ce e8 e6 f1 
+# Line :  59    ee d6 eb e9 e3 d5 d7 df 
+# Line :  60    e7 fc 00 df e4 f7 fa e5 
+# Line :  61    d6 fc fa e2 e5 03 ff dc 
+# Line :  62    dc e5 e2 e5 e0 e6 de dd 
+# Line :  63    e8 00 de e2 e3 e3 03 e5 
+# Line :  64    e6 e5 00 00 00 00 a9 e7 
+# Line :  65    ff d4 ed de cb e6 e6 f2 
+# Line :  66    ea d5 e9 eb e8 d8 db df 
+# Line :  67    e3 ff 05 e4 e3 fb fb e7 
+# Line :  68    d6 fd fc e0 e7 00 ff df 
+# Line :  69    d8 ea de e0 dc e5 dc dd 
+# Line :  70    e4 05 d9 e3 e1 e1 08 e0 
+# Line :  71    e4 e1 04 00 01 02 a5 ec 
+# Line :  72    ff df e2 e5 e0 a2 a3 ff 
+# Line :  73    ec d8 e8 e7 ed dc d7 db 
+# Line :  74    e2 fa 0a e5 e7 fd fb e2 
+# Line :  75    d2 ff ff e3 ec 01 ff e1 
+# Line :  76    d3 eb e1 db d9 e3 e1 e2 
+# Line :  77    e2 01 d6 e6 e2 e4 03 dd 
+# Line :  78    e8 e1 07 01 04 06 a1 ef 
+# Line :  79    ff db e0 e8 db a6 a1 fb 
+# Line :  80    fc ff ff df e7 ff ff ff 
+# Line :  81    e6 fa 0f e3 e8 f8 f6 e1 
+# Line :  82    d7 fc fd e6 e8 00 fb e2 
+# Line :  83    d7 e7 e0 e0 de e8 dd e7 
+# Line :  84    e6 05 d1 e2 e5 e6 03 e0 
+# Line :  85    e4 df 04 00 05 08 a6 ed 
+# Line :  86    fb d6 e3 eb de aa 9c fa 
+# Line :  87    fe ff ff e1 e4 fa fa fd 
+# Line :  88    fe ff fe e2 dd fe ff fe 
+# Line :  89    da fc f8 ea ec 03 fc e1 
+# Line :  90    d7 e3 e3 e0 dd ec e2 e5 
+# Line :  91    e3 09 d1 dd e0 eb 00 e1 
+# Line :  92    e6 dc 03 00 01 0d a5 ed 
+# Line :  93    ff d3 e7 ef de a7 a0 fe 
+# Line :  94    ff fa ff de e4 fc f6 f9 
+# Line :  95    fe fd fc dd d8 ff ff f9 
+# Line :  96    ff 56 50 e6 e6 50 56 fd 
+# Line :  97    d3 df e7 db e1 ec e7 e5 
+# Line :  98    df 09 d5 e0 df ea 00 e3 
+# Line :  99    e6 d9 00 00 01 12 a9 e8 
+# Line : 100    ff cf e9 ee dd ab a0 ff 
+# Line : 101    ff f6 fa d9 df fc f7 fe 
+# Line : 102    fe fb ff dc d9 fa ff f9 
+# Line : 103    fa 52 51 e6 e1 4f 54 ff 
+# Line : 104    e4 56 72 e7 e4 77 53 df 
+# Line : 105    db 0b d9 dc dd ed 05 e8 
+# Line : 106    e9 d5 00 00 01 0e a7 ec 
+# Line : 107    fc d3 ed f2 df a6 a4 fb 
+# Line : 108    ff f6 f8 d6 dd fe fc fe 
+# Line : 109    ff fb ff de dc fc ff fa 
+# Line : 110    f6 55 51 e4 dc 51 56 ff 
+# Line : 111    e8 56 6f e4 e0 74 58 df 
+# Line : 112    e7 52 74 e7 e7 74 51 e7 
+# Line : 113    e7 d0 00 04 00 0d aa f0 
+# Line : 114    f7 d5 f0 f1 e0 a5 a8 f7 
+# Line : 115    fd fa f5 db e0 fd fd fa 
+# Line : 116    ff fc fa d9 de fa fa fa 
+# Line : 117    f5 55 51 e1 d7 51 57 ff 
+# Line : 118    e3 57 70 e2 e3 75 59 e2 
+# Line : 119    e9 4f 72 e3 e3 6f 56 e9 
+# Line : 120    e6 53 6d 75 77 74 4e e1 
+# Line : 121    f9 d7 f4 f1 dd a6 ac f5 
+# Line : 122    ff f7 f3 d6 e2 fe fc fd 
+# Line : 123    ff ff fc da dc fa fb ff 
+# Line : 124    fa 57 53 dd d5 54 55 fb 
+# Line : 125    df 5b 71 e0 e5 77 59 e5 
+# Line : 126    ed 4a 74 e4 e5 72 5a ea 
+# Line : 127    e6 54 68 70 75 74 53 e2 
+# Line : 128    de 52 4f 4a 4a 51 50 de 
+# Line : 129    fc fa f4 d6 e7 ff f8 ff 
+# Line : 130    ff ff fe d6 da f6 fc ff 
+# Line : 131    ff 5b 53 da da 56 53 fe 
+# Line : 132    db 5c 6e dd e2 79 59 e8 
+# Line : 133    f0 46 71 e9 e3 6e 59 ee 
+# Line : 134    e8 51 6c 6c 75 77 56 e0 
+# Line : 135    e1 57 4c 4e 4c 4d 54 e3 
+# Line : 136    e5 4e 55 51 4a 53 4d e5 
+# Line : 137    fc ff fb d7 df f6 fb fc 
+# Line : 138    ff 5e 58 dd de 53 58 ff 
+# Line : 139    d9 58 6c dd e3 7b 58 ea 
+# Line : 140    ec 49 74 e7 df 6c 59 ed 
+# Line : 141    eb 55 70 71 76 73 51 e5 
+# Line : 142    e0 59 47 49 50 4e 4f e8 
+# Line : 143    e4 4a 5a 4e 4c 55 48 e3 
+# Line : 144    df 51 53 54 4e 54 4f df 
+# Line : 145    ff 5c 54 da e3 50 5c ff 
+# Line : 146    d4 5c 6f de df 76 57 ed 
+# Line : 147    e7 4e 73 e9 dd 6e 57 f1 
+# Line : 148    e8 5a 74 76 79 74 51 e7 
+# Line : 149    e4 56 4c 4d 4d 4f 4e e3 
+# Line : 150    e8 46 55 4a 51 51 4d de 
+# Line : 151    db 54 54 59 49 52 4e da 
+# Line : 152    de 56 50 4d 56 56 4d e4 
+# Line : 153    d6 5c 72 dc dc 74 58 eb 
+# Line : 154    eb 4a 76 ec dc 6e 58 f1 
+# Line : 155    ea 5d 73 71 7d 70 4c e4 
+# Line : 156    e6 5a 4e 4c 51 52 4b df 
+# Line : 157    ea 46 5a 46 52 4f 4e e1 
+# Line : 158    de 53 53 5b 49 51 52 d6 
+# Line : 159    e0 59 53 48 56 57 4c e3 
+# Line : 160    e3 56 53 56 4c 51 54 e5 
+# Line : 161    e9 46 75 ed dd 72 54 f3 
+# Line : 162    e5 60 71 73 81 73 4d df 
+# Line : 163    e3 59 50 4c 56 4f 4f da 
+# Line : 164    e6 42 59 45 4f 52 50 de 
+# Line : 165    da 52 55 5d 4d 55 57 d5 
+# Line : 166    dc 54 4f 4b 58 53 49 df 
+# Line : 167    e4 52 4e 53 48 56 52 e3 
+# Line : 168    fb 00 00 01 00 03 03 ff 
+# Line : 169    e9 5e 73 6e 81 78 48 e2 
+# Line : 170    e4 5a 4f 4a 5a 4f 52 da 
+# Line : 171    e2 47 5d 43 53 4e 51 dd 
+# Line : 172    da 4d 5a 58 4e 53 54 d7 
+# Line : 173    db 57 50 4e 55 56 46 db 
+# Line : 174    e0 57 52 57 48 52 4d e3 
+# Line : 175    fe 01 00 05 01 07 03 ff 
+# Line : 176    fc 00 00 01 01 01 00 ff 
+# Line : 177    e5 5e 51 4b 56 4b 4f d6 
+# Line : 178    e0 49 5a 46 56 51 52 e0 
+# Line : 179    df 4d 5c 5b 53 54 53 d4 
+# Line : 180    dd 56 51 4c 59 5a 4b d8 
+# Line : 181    dc 53 4e 57 44 55 50 e4 
+# Line : 182    fe 02 00 00 03 08 05 ff 
+# Line : 183    f7 00 03 02 02 00 00 fc 
+# Line : 184    ff 00 05 fe fb 02 00 ff 
+# Line : 185    dd 4c 5a 46 5b 51 57 e4 
+# Line : 186    de 52 57 5d 55 51 50 d3 
+# Line : 187    df 53 55 47 59 5f 4b db 
+# Line : 188    d7 4e 51 55 40 55 51 e5 
+# Line : 189    ff 01 00 01 00 07 06 fe 
+# Line : 190    f2 02 04 05 03 00 00 f8 
+# Line : 191    fb 00 0a fc fc 03 00 fa 
+# Line : 192    fc 00 04 fb fa 01 01 fe 
+# Line : 193    db 4d 52 58 57 50 50 d5 
+# Line : 194    da 54 5a 4c 5a 60 4b d8 
+# Line : 195    d9 50 4e 50 44 51 4e e3 
+# Line : 196    ff 00 00 05 00 0b 08 ff 
+# Line : 197    ee 00 01 01 00 02 00 f8 
+# Line : 198    f6 02 0b ff f7 05 03 f7 
+# Line : 199    ff 00 09 fb f7 00 03 fe 
+# Line : 200    fd 05 04 ff ff 00 02 ff 
+# Line : 201    dd 57 5a 4e 5e 64 4b da 
+# Line : 202    dd 4d 53 4d 43 51 4d e0 
+# Line : 203    ff 04 00 06 00 08 0d fb 
+# Line : 204    f2 00 00 03 01 06 03 fa 
+# Line : 205    f7 00 08 ff f4 04 07 f9 
+# Line : 206    fd 00 0c fc f8 00 00 ff 
+# Line : 207    fd 03 04 ff fe 00 04 fd 
+# Line : 208    fd 00 00 fd fa 05 00 ff 
+# Line : 209    e0 4e 4e 52 40 4d 52 df 
+# Line : 210    ff 08 00 08 00 07 09 fb 
+# Line : 211    ee 04 05 03 05 03 05 f7 
+# Line : 212    f9 00 05 ff f8 02 08 f7 
+# Line : 213    f8 00 0c f7 fc 05 03 fb 
+# Line : 214    ff 00 09 fa ff 00 06 ff 
+# Line : 215    ff 03 00 fc f9 04 03 ff 
+# Line : 216    ff 00 00 fd ff 00 00 fb 
+# Line : 217    fd 04 05 0b 03 04 09 ff 
+# Line : 218    eb 03 02 00 05 00 05 f4 
+# Line : 219    fc 01 03 fb f7 05 0d fb 
+# Line : 220    f6 00 0c f3 fd 05 03 f6 
+# Line : 221    ff 00 06 fc ff 01 0b fb 
+# Line : 222    fe 00 00 fb f8 01 08 ff 
+# Line : 223    ff 02 00 fb ff 00 00 f7 
+# Line : 224    ff 00 02 ff ff 00 02 fb 
+# Line : 225    e8 07 02 05 07 03 08 f3 
+# Line : 226    fc 00 05 f9 f3 05 0a ff 
+# Line : 227    fa 00 09 f3 fc 00 07 fb 
+# Line : 228    ff 01 05 f7 ff 05 0f ff 
+# Line : 229    fc 00 00 fb f6 00 05 ff 
+# Line : 230    fd 02 00 fb fb 00 00 f4 
+# Line : 231    fd 00 07 ff fd 00 04 fe 
+# Line : 232    fd 68 69 ff fd 6e 69 ff 
+# Line : 233    f7 00 00 f7 ef 05 0a ff 
+# Line : 234    f8 03 06 f6 ff 00 0b ff 
+# Line : 235    ff 06 07 fb fd 03 14 ff 
+# Line : 236    fe 04 04 f9 f4 00 00 fa 
+# Line : 237    f8 04 02 f9 fa 00 02 f4 
+# Line : 238    ff 05 05 fe ff 00 00 fd 
+# Line : 239    fe 6a 6e ff f8 71 6a ff 
+# Line : 240    ff ff ff ff ff ff ff ff 
+# Line : 241    f3 05 01 f6 ff 01 07 ff 
+# Line : 242    fa 07 0b ff fc 08 14 ff 
+# Line : 243    fd 02 09 fd f8 03 00 f6 
+# Line : 244    f8 05 00 fd f9 00 02 ef 
+# Line : 245    ff 08 05 fa ff 00 05 ff 
+# Line : 246    fe 6d 72 fa f6 73 65 ff 
+# Line : 247    ff ff fe fe ff ff ff ff 
+# Line : 248    ff fa fe fd fb fd ff ff 
+# Line : 249    f5 06 08 ff f7 0d 11 ff 
+# Line : 250    ff 07 09 fa fd 03 00 f7 
+# Line : 251    f4 00 03 ff fc 00 03 ed 
+# Line : 252    fe 0b 09 fd ff 00 08 ff 
+# Line : 253    ff 68 70 fa f9 76 61 fe 
+# Line : 254    ff ff ff ff ff fb fa fa 
+# Line : 255    ff fd fd ff fd f8 ff ff 
+# Line : 256    fb fc fe ff fe fa ff fb 
+# Line : 257    ff 09 0b f7 ff 00 05 f3 
+# Line : 258    ef 00 00 ff fe 00 06 e9 
+# Line : 259    fb 0a 0a f9 fc 00 08 fa 
+# Line : 260    ff 68 6c fd f7 77 64 ff 
+# Line : 261    ff fa fb ff fb fb fc f5 
+# Line : 262    ff ff ff fd f8 f8 ff fb 
+# Line : 263    f8 f7 ff fb f9 f5 ff ff 
+# Line : 264    fe ff ff fa ff ff ff ff 
+# Line : 265    f0 03 00 ff ff 00 06 ed 
+# Line : 266    fd 0b 08 fc ff 02 09 fb 
+# Line : 267    fe 66 6f fd f9 73 64 ff 
+# Line : 268    fa fa f9 ff ff f7 ff f4 
+# Line : 269    fb ff ff ff fb f3 ff fe 
+# Line : 270    fb f3 ff f7 fc f4 fb ff 
+# Line : 271    fe ff fe fd fc ff ff fd 
+# Line : 272    ff fa ff fe fd fd ff ff 
+# Line : 273    fa 0b 0c fd fa 00 0c ff 
+# Line : 274    fe 67 6e fc f9 77 68 fd 
+# Line : 275    fd f9 fb fa ff f5 ff f8 
+# Line : 276    f9 fb ff ff f9 f2 fe fb 
+# Line : 277    fd ee ff f9 fa f1 fe ff 
+# Line : 278    ff ff ff fb ff fa ff ff 
+# Line : 279    ff ff ff ff ff ff ff ff 
+# Line : 280    ff fb fa ff ff fc fa fc 
+# Line : 281    ff 6a 6f ff f5 79 6b fa 
+# Line : 282    f8 f6 fb fc ff f6 ff f4 
+# Line : 283    f4 f8 ff ff f7 f7 ff f9 
+# Line : 284    f9 f2 fa f7 fe f3 fb ff 
+# Line : 285    ff ff ff f8 fc ff ff ff 
+# Line : 286    ff ff fb ff ff ff ff fd 
+# Line : 287    ff fd fa ff fe ff fe f7 
+# Line : 288    fb ff ff fa fc ff ff fd 
+# Line : 289    f7 f1 ff fe ff f8 ff f6 
+# Line : 290    ef f4 ff fd f7 fc ff fc 
+# Line : 291    f9 f0 f6 f2 ff f1 ff ff 
+# Line : 292    ff ff fe f4 f9 ff ff fa 
+# Line : 293    ff ff f7 fc ff ff ff ff 
+# Line : 294    ff f9 f6 ff fd ff fe f4 
+# Line : 295    ff fc ff fa f7 ff fa f8 
+# Line : 296    ff fc ff fe ff fb fb fa 
+# Files are identical.
+# ** Note: $stop    : ../tb/testbench.sv(233)
+#    Time: 1048300 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 233
+# End time: 15:54:07 on May 11,2026, Elapsed time: 0:11:49
+# Errors: 0, Warnings: 1

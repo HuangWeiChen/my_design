@@ -1,0 +1,13 @@
+module escape(
+    input  logic        clk,
+    input  logic        rst_n,          // active-low reset
+    input  logic [1:0]  landform,       // 00 wall, 01 path, 10 trap, 11 hostage
+    input  logic        valid,          // 成功傳送就 valid
+    output logic        ready,          // 讀取資料
+    output logic [2:0]  action,         // 0:R,1:D,2:L,3:U,4:STALL
+    output logic        finish          // high when (16,16) reached AND all hostages rescued
+);
+
+   
+
+endmodule

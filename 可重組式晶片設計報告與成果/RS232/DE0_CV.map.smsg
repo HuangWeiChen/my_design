@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at rs232_rx.sv(156): always construct contains both blocking and non-blocking assignments File: C:/Users/user/Downloads/RS232/design/rs232_rx.sv Line: 156
+Info (10281): Verilog HDL Declaration information at spi_rx.sv(13): object "tx_req" differs only in case from object "TX_REQ" in the same scope File: C:/Users/user/Downloads/RS232/design/spi_rx.sv Line: 13

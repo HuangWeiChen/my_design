@@ -1,0 +1,56 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/user/Downloads/HW11_Maze/DE0_CV/simulation/modelsim
+vescape
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1778825686
+!i10b 1
+!s100 JZe=iAh2QFcIA:SbdFUM00
+I>]>?OziokTWnK6MmER;d:0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 escape_sv_unit
+S1
+R0
+w1778818962
+8../../design/escape.sv
+F../../design/escape.sv
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1778825686.000000
+!s107 ../../design/escape.sv|
+!s90 -reportprogress|300|../../design/escape.sv|
+!i113 1
+Z4 tCvgOpt 0
+vtestbench
+R1
+!s110 1778825685
+!i10b 1
+!s100 [^f>SDozbd56N]bI3l[U]3
+I;E:m3iEiIZM_C_k9?HR6U2
+R2
+!s105 testbench_sv_unit
+S1
+R0
+w1778825675
+8../tb/testbench.sv
+F../tb/testbench.sv
+L0 4
+R3
+r1
+!s85 0
+31
+!s108 1778825685.000000
+!s107 ../tb/testbench.sv|
+!s90 -reportprogress|300|../tb/testbench.sv|
+!i113 1
+R4

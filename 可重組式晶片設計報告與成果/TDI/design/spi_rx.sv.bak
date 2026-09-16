@@ -1,0 +1,90 @@
+module spi_rx(
+	input logic clk,
+	input logic mosi,
+	input logic ssn,
+	input logic sclk,
+	input logic rst,
+	output logic [7:0]address,
+	output logic [15:0]data,
+	output logic read_en,
+	output logic write-en,
+	output logic tx_req
+	);
+	
+	//Edge Detector
+	logic s_signal;
+	logic d_signal;
+	logic ssn_negedge;
+	logic sclk_posedge;
+	
+	always_ff@(posedge clk)
+	begin
+		if(rst) 
+		begin
+			s_signal			<= 1'b1;
+			d_signal 		<= 1'b1;
+			ssn_negedge		<= 1'b0;
+			sclk_posedge	<= 1'b0;
+		end
+		else 
+		begin
+			{d_signl, s_signal} 	<= {s_signal, sclk};
+			ssn_negedge 			<= ~s_signal & d_signal;
+			sclk_posedge 			<= s_signal & ~d_signal;
+		end
+	end
+	
+	//Counter
+	logic [31:0] receive_data_counter;
+	
+	always_ff@(posedge clk)
+	begin
+		if(rst) 
+			receive_data_counter <= 32'b0;
+		else if(ssn)
+			receive_data_counter <= 32'b0;
+		else if(sclk_posedge)
+			receive_data_counter <= receive_data_counter + 1'b1;
+	end
+	
+	//Shift Register
+	logic [31:0]shift_data;
+	logic shift;
+	
+	always_ff@(posedge clk)
+	begin
+		if(rst) 
+			shift_data 		<= 32'b0;
+		else if(shift)
+		begin
+			shift_data 		<< 1;
+			shift_data[0] 	<= mosi;
+		end
+	end
+	
+	//reg
+	logic [15:0] reg_file [255:0];
+	logic load_command;
+	logic load_address;
+	logic load_data;
+	logic read_en;
+	
+	always_ff@(posedge clk)
+	begin
+		if(load)
+			if(~load_command)
+				reg_file[load_address] <= load_data;
+			else
+				read_data <= reg_file[address];
+	
+	//FSM
+	typedef enum {}FSM_STATE;
+	FSM_STATE fsm_ns,fsm_ps;
+	
+	always_comb 
+	begin
+		
+		case
+	end
+	
+endmodule

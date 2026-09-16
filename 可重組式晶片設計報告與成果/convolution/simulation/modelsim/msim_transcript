@@ -1,0 +1,179 @@
+# Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do DE0_CV_run_msim_rtl_systemverilog.do
+# if ![file isdirectory DE0_CV_iputf_libs] {
+# 	file mkdir DE0_CV_iputf_libs
+# }
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+# 
+# 
+# vlog "E:/CNN/pll_sim/pll.vo"
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:56:20 on Jun 10,2026
+# vlog -reportprogress 300 E:/CNN/pll_sim/pll.vo 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 08:56:21 on Jun 10,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+E:/CNN {E:/CNN/fifo.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:56:21 on Jun 10,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/CNN" E:/CNN/fifo.v 
+# -- Compiling module fifo
+# 
+# Top level modules:
+# 	fifo
+# End time: 08:56:21 on Jun 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/CNN/design {E:/CNN/design/CNN.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:56:21 on Jun 10,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/CNN/design" E:/CNN/design/CNN.sv 
+# -- Compiling module CNN
+# 
+# Top level modules:
+# 	CNN
+# End time: 08:56:21 on Jun 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/CNN/design {E:/CNN/design/spi_rx.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:56:21 on Jun 10,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/CNN/design" E:/CNN/design/spi_rx.sv 
+# -- Compiling module spi_rx
+# 
+# Top level modules:
+# 	spi_rx
+# End time: 08:56:21 on Jun 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/CNN/design {E:/CNN/design/DE0_CV.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:56:21 on Jun 10,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/CNN/design" E:/CNN/design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 08:56:22 on Jun 10,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:56:26 on Jun 10,2026
+# vlog -reportprogress 300 ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 08:56:26 on Jun 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:56:26 on Jun 10,2026
+# vlog -reportprogress 300 ../../design/CNN.sv 
+# -- Compiling module CNN
+# 
+# Top level modules:
+# 	CNN
+# End time: 08:56:26 on Jun 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:56:26 on Jun 10,2026
+# vlog -reportprogress 300 ../../design/spi_rx.sv 
+# -- Compiling module spi_rx
+# 
+# Top level modules:
+# 	spi_rx
+# End time: 08:56:26 on Jun 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:56:26 on Jun 10,2026
+# vlog -reportprogress 300 ../../fifo.v 
+# -- Compiling module fifo
+# 
+# Top level modules:
+# 	fifo
+# End time: 08:56:26 on Jun 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:56:26 on Jun 10,2026
+# vlog -reportprogress 300 ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 08:56:26 on Jun 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# vsim -voptargs=""+acc"" -L altera_mf_ver work.testbench 
+# Start time: 08:56:29 on Jun 10,2026
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.DE0_CV
+# Loading work.CNN
+# Loading work.spi_rx
+# Loading work.fifo
+# Loading altera_mf_ver.scfifo
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# ** Warning: (vsim-PLI-3691) ../tb/testbench.sv(209): Expected a system task, not a system function '$fgets'.
+#    Time: 0 ps  Iteration: 0  Region: /testbench/compare_files File: ../tb/testbench.sv
+# ** Warning: (vsim-PLI-3691) ../tb/testbench.sv(210): Expected a system task, not a system function '$fgets'.
+#    Time: 0 ps  Iteration: 0  Region: /testbench/compare_files File: ../tb/testbench.sv
+# ** Warning: (vsim-3017) ../tb/testbench.sv(45): [TFMPC] - Too few port connections. Expected 41, found 21.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DE0_CV1 File: ../../design/DE0_CV.sv
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'DRAM_ADDR'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'DRAM_BA'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'DRAM_CAS_N'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'DRAM_CKE'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'DRAM_CLK'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'DRAM_CS_N'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'DRAM_DQ'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'DRAM_LDQM'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'DRAM_RAS_N'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'DRAM_UDQM'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'DRAM_WE_N'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'PS2_CLK'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'PS2_CLK2'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'PS2_DAT'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'PS2_DAT2'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'VGA_B'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'VGA_G'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'VGA_HS'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'VGA_R'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(45): [TFMPC] - Missing connection for port 'VGA_VS'.
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# WARNING: Failed to parse line 10: "
+# "
+# WARNING: Failed to parse line 19: "
+# "
+# WARNING: Failed to parse line 28: "
+# "
+# WARNING: Failed to parse line 37: "
+# "
+# WARNING: Failed to parse line 46: "
+# "
+# WARNING: Failed to parse line 55: "
+# "
+# WARNING: Failed to parse line 64: "
+# "
+# WARNING: Failed to parse line 73: "
+# "
+# Files are identical.
+# ** Note: $stop    : ../tb/testbench.sv(270)
+#    Time: 389600 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 270
+# End time: 08:56:37 on Jun 10,2026, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 23

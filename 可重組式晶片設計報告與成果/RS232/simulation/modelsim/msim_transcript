@@ -1,0 +1,338 @@
+# Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do DE0_CV_run_msim_rtl_systemverilog.do
+# if ![file isdirectory DE0_CV_iputf_libs] {
+# 	file mkdir DE0_CV_iputf_libs
+# }
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+# 
+# 
+# vlog "C:/Users/user/Downloads/RS232/pll_sim/pll.vo"
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:16:02 on May 05,2026
+# vlog -reportprogress 300 C:/Users/user/Downloads/RS232/pll_sim/pll.vo 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 13:16:03 on May 05,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/user/Downloads/RS232/design {C:/Users/user/Downloads/RS232/design/RS232.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:16:03 on May 05,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/user/Downloads/RS232/design" C:/Users/user/Downloads/RS232/design/RS232.sv 
+# -- Compiling module RS232
+# 
+# Top level modules:
+# 	RS232
+# End time: 13:16:03 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/user/Downloads/RS232/design {C:/Users/user/Downloads/RS232/design/rs232_rx.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:16:03 on May 05,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/user/Downloads/RS232/design" C:/Users/user/Downloads/RS232/design/rs232_rx.sv 
+# -- Compiling module rs232_rx
+# 
+# Top level modules:
+# 	rs232_rx
+# End time: 13:16:03 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/user/Downloads/RS232/design {C:/Users/user/Downloads/RS232/design/rs232_tx.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:16:03 on May 05,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/user/Downloads/RS232/design" C:/Users/user/Downloads/RS232/design/rs232_tx.sv 
+# -- Compiling module rs232_tx
+# 
+# Top level modules:
+# 	rs232_tx
+# End time: 13:16:03 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/user/Downloads/RS232/design {C:/Users/user/Downloads/RS232/design/Low_Pass_Filter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:16:03 on May 05,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/user/Downloads/RS232/design" C:/Users/user/Downloads/RS232/design/Low_Pass_Filter.sv 
+# -- Compiling module Low_Pass_Filter
+# 
+# Top level modules:
+# 	Low_Pass_Filter
+# End time: 13:16:03 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/user/Downloads/RS232/design {C:/Users/user/Downloads/RS232/design/DE0_CV.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:16:03 on May 05,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/user/Downloads/RS232/design" C:/Users/user/Downloads/RS232/design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 13:16:03 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:17:10 on May 05,2026
+# vlog -reportprogress 300 ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 13:17:10 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:17:10 on May 05,2026
+# vlog -reportprogress 300 ../../design/rs232_rx.sv 
+# -- Compiling module rs232_rx
+# 
+# Top level modules:
+# 	rs232_rx
+# End time: 13:17:10 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:17:10 on May 05,2026
+# vlog -reportprogress 300 ../../design/rs232_tx.sv 
+# -- Compiling module rs232_tx
+# 
+# Top level modules:
+# 	rs232_tx
+# End time: 13:17:10 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:17:10 on May 05,2026
+# vlog -reportprogress 300 ../../design/RS232.sv 
+# -- Compiling module RS232
+# 
+# Top level modules:
+# 	RS232
+# End time: 13:17:10 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:17:10 on May 05,2026
+# vlog -reportprogress 300 ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 13:17:10 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:17:10 on May 05,2026
+# vlog -reportprogress 300 ../../pll.v 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 13:17:10 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:17:10 on May 05,2026
+# vlog -reportprogress 300 ../../design/Low_Pass_Filter.sv 
+# -- Compiling module Low_Pass_Filter
+# 
+# Top level modules:
+# 	Low_Pass_Filter
+# End time: 13:17:10 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 13:17:12 on May 05,2026
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.RS232
+# Loading work.Low_Pass_Filter
+# Loading work.rs232_rx
+# Loading work.rs232_tx
+# ** Warning: (vsim-3015) ../tb/testbench.sv(40): [PCDPC] - Port size (1) does not match connection size (14) for port 'r_LPF_threshold'. The port definition is at: ../../design/RS232.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/rs232_1 File: ../../design/RS232.sv
+# ** Warning: (vsim-3015) ../../design/RS232.sv(10): [PCDPC] - Port size (14) does not match connection size (1) for port 'r_LPF_threshold'. The port definition is at: ../../design/Low_Pass_Filter.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/rs232_1/Low_Pass_Filter_1 File: ../../design/Low_Pass_Filter.sv
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(96)
+#    Time: 14326040 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 96
+add wave -position 17  sim:/testbench/rs232_1/reg_file[13]
+add wave -position 18  sim:/testbench/rs232_1/reg_file[2]
+add wave -position 30  sim:/testbench/rs232_1/reg_file[19]
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/user/Downloads/RS232/simulation/modelsim/wave.do
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:15:56 on May 05,2026
+# vlog -reportprogress 300 ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:15:56 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:15:56 on May 05,2026
+# vlog -reportprogress 300 ../../design/rs232_rx.sv 
+# -- Compiling module rs232_rx
+# 
+# Top level modules:
+# 	rs232_rx
+# End time: 14:15:57 on May 05,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:15:57 on May 05,2026
+# vlog -reportprogress 300 ../../design/rs232_tx.sv 
+# -- Compiling module rs232_tx
+# 
+# Top level modules:
+# 	rs232_tx
+# End time: 14:15:57 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:15:57 on May 05,2026
+# vlog -reportprogress 300 ../../design/RS232.sv 
+# -- Compiling module RS232
+# 
+# Top level modules:
+# 	RS232
+# End time: 14:15:57 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:15:57 on May 05,2026
+# vlog -reportprogress 300 ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 14:15:57 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:15:57 on May 05,2026
+# vlog -reportprogress 300 ../../pll.v 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 14:15:57 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:15:57 on May 05,2026
+# vlog -reportprogress 300 ../../design/Low_Pass_Filter.sv 
+# -- Compiling module Low_Pass_Filter
+# 
+# Top level modules:
+# 	Low_Pass_Filter
+# End time: 14:15:57 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 14:15:59 on May 05,2026, Elapsed time: 0:58:47
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 14:15:59 on May 05,2026
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.RS232
+# Loading work.Low_Pass_Filter
+# Loading work.rs232_rx
+# Loading work.rs232_tx
+# ** Warning: (vsim-3015) ../tb/testbench.sv(40): [PCDPC] - Port size (1) does not match connection size (14) for port 'r_LPF_threshold'. The port definition is at: ../../design/RS232.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/rs232_1 File: ../../design/RS232.sv
+# ** Warning: (vsim-3015) ../../design/RS232.sv(10): [PCDPC] - Port size (14) does not match connection size (1) for port 'r_LPF_threshold'. The port definition is at: ../../design/Low_Pass_Filter.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/rs232_1/Low_Pass_Filter_1 File: ../../design/Low_Pass_Filter.sv
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(97)
+#    Time: 13024040 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 97
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/user/Downloads/RS232/simulation/modelsim/wave.do
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:17 on May 05,2026
+# vlog -reportprogress 300 ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:17:17 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:17 on May 05,2026
+# vlog -reportprogress 300 ../../design/rs232_rx.sv 
+# -- Compiling module rs232_rx
+# 
+# Top level modules:
+# 	rs232_rx
+# End time: 14:17:17 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:17 on May 05,2026
+# vlog -reportprogress 300 ../../design/rs232_tx.sv 
+# -- Compiling module rs232_tx
+# 
+# Top level modules:
+# 	rs232_tx
+# End time: 14:17:17 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:17 on May 05,2026
+# vlog -reportprogress 300 ../../design/RS232.sv 
+# -- Compiling module RS232
+# 
+# Top level modules:
+# 	RS232
+# End time: 14:17:17 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:17 on May 05,2026
+# vlog -reportprogress 300 ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 14:17:17 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:17 on May 05,2026
+# vlog -reportprogress 300 ../../pll.v 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 14:17:17 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:17 on May 05,2026
+# vlog -reportprogress 300 ../../design/Low_Pass_Filter.sv 
+# -- Compiling module Low_Pass_Filter
+# 
+# Top level modules:
+# 	Low_Pass_Filter
+# End time: 14:17:17 on May 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 14:17:19 on May 05,2026, Elapsed time: 0:01:20
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 14:17:19 on May 05,2026
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.RS232
+# Loading work.Low_Pass_Filter
+# Loading work.rs232_rx
+# Loading work.rs232_tx
+# ** Warning: (vsim-3015) ../tb/testbench.sv(40): [PCDPC] - Port size (1) does not match connection size (14) for port 'r_LPF_threshold'. The port definition is at: ../../design/RS232.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/rs232_1 File: ../../design/RS232.sv
+# ** Warning: (vsim-3015) ../../design/RS232.sv(10): [PCDPC] - Port size (14) does not match connection size (1) for port 'r_LPF_threshold'. The port definition is at: ../../design/Low_Pass_Filter.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/rs232_1/Low_Pass_Filter_1 File: ../../design/Low_Pass_Filter.sv
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(97)
+#    Time: 15628040 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 97
+add wave -position 11  sim:/testbench/rs232_1/rs232_rx_1/rst_pkg_cnt
+# End time: 14:24:00 on May 05,2026, Elapsed time: 0:06:41
+# Errors: 0, Warnings: 2

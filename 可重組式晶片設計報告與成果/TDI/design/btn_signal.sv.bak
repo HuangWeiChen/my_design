@@ -1,0 +1,186 @@
+`timescale 1ns/1ps
+module spi_rx(
+	input logic clk,
+	input logic mosi,
+	input logic ssn,
+	input logic sclk,
+	input logic rst,
+	output logic [7:0]address,
+	output logic [15:0]data,
+	output logic read_en,
+	output logic write_en,
+	output logic tx_req
+	);
+	
+	//Edge Detector
+	logic s_signal;
+	logic d_signal;
+	logic ssn_negedge;
+	logic sclk_posedge;
+	
+	always_ff@(posedge clk)
+	begin
+		if(rst) 
+		begin
+			s_signal			<= 1'b1;
+			d_signal 		<= 1'b1;
+			ssn_negedge		<= 1'b0;
+			sclk_posedge	<= 1'b0;
+		end
+		else 
+		begin
+			{d_signal, s_signal} 	<= {s_signal, sclk};
+			ssn_negedge 			<= ~s_signal & d_signal;
+			sclk_posedge 			<= s_signal & ~d_signal;
+		end
+	end
+	
+	//Counter
+	logic [31:0] receive_data_counter;
+	
+	always_ff@(posedge clk)
+	begin
+		if(rst || receive_data_counter_rst) 
+			receive_data_counter <= 32'b0;
+		else if(ssn)
+			receive_data_counter <= 32'b0;
+		else if(sclk_posedge)
+			receive_data_counter <= receive_data_counter + 1'b1;
+	end
+	
+	//Shift Register
+	logic [31:0]shift_data;
+	logic shift;
+	
+	always_ff@(posedge clk)
+	begin
+		if(rst) 
+			shift_data 		<= 32'b0;
+		else if(shift) begin
+			shift_data     <= shift_data << 1;
+			shift_data[0] 	<= mosi;
+		end
+	end
+	
+	//reg
+	logic [15:0] reg_file [255:0];
+	logic load_command;
+	logic load_address;
+	logic load_data;
+	logic command;
+	logic [8:0]read_data;
+	
+	always_ff@(posedge clk)
+	begin
+		if(load_command)
+			command = shift_data[7];
+		if(load_address)
+			address = shift_data[15:8];
+		if(load_data)
+			data = shift_data[15:0];
+		if(write_en)
+			if(~command)
+				reg_file[address] <= data;
+			else
+				read_data <= reg_file[address];
+	end
+	
+	//FSM
+	typedef enum{ INIT, START_SPI_RX, RECEIVE_ADDRESS, DUMMY, 
+		CHECK_COMMAND, TX_REQ, FINISH, RECEIVE_DATA, WRITE
+   } FSM_STATE;
+	FSM_STATE fsm_ns,fsm_ps;
+	
+	always_ff@(posedge clk) begin
+        if(rst)
+            fsm_ps      <= INIT;
+        else
+            fsm_ps      <= fsm_ns;
+   end
+	 
+	logic receive_data_counter_rst;
+	logic rx_finish;
+	
+	always_comb 
+	begin
+		fsm_ns							=	fsm_ps;
+		receive_data_counter_rst 	=  0;
+		load_command					=	0;
+		load_address					=	0;
+		load_data						=	0;
+		read_en							=	0;
+		write_en							=	0;
+		shift								=  0;
+		case(fsm_ps)
+			INIT:
+			begin
+				fsm_ns	= START_SPI_RX;
+			end
+			START_SPI_RX:
+			begin
+				if(ssn_negedge) begin
+					receive_data_counter_rst = 1;
+					fsm_ns = RECEIVE_ADDRESS;
+				end
+				else
+					fsm_ns = START_SPI_RX;
+			end
+			RECEIVE_ADDRESS:
+			begin
+				if(receive_data_counter>=9) begin
+					shift  = 1;
+					fsm_ns = DUMMY;
+				end
+				else begin
+					shift  = 1;
+					fsm_ns = RECEIVE_ADDRESS;
+				end
+			end
+			DUMMY:
+			begin
+				if(receive_data_counter>=16) begin
+					shift  		 = 1;
+					load_command = 1;
+					load_address = 1;
+					receive_data_counter_rst = 1;
+					fsm_ns = CHECK_COMMAND;
+				end
+				else begin
+					shift  = 1;
+					fsm_ns = DUMMY;
+				end
+			end
+			CHECK_COMMAND:
+			begin
+				shift = 1;
+				if(command)
+					fsm_ns = TX_REQ;
+				else
+					fsm_ns = RECEIVE_DATA;
+					
+			end
+			TX_REQ:
+			begin
+				fsm_ns = FINISH;
+			end
+			FINISH:
+			begin
+				fsm_ns = INIT;
+			end
+			RECEIVE_DATA:
+			begin
+				if(receive_data_counter>=16)
+					fsm_ns = WRITE;
+				else
+					fsm_ns = RECEIVE_DATA;
+			end
+			WRITE:
+			begin
+				write_en = 1;
+				fsm_ns = FINISH;
+			end
+			
+		endcase
+	end
+	
+endmodule

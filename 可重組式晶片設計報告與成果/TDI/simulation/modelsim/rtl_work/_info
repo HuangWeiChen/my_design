@@ -1,0 +1,144 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/user/Downloads/TDI/simulation/modelsim
+vDE0_CV
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1778485336
+!i10b 1
+!s100 VU<BJJoAZMa9R1o_^8QDM1
+Ii=EAl=A_9Hhn[3E7F6i^i0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 DE0_CV_sv_unit
+S1
+R0
+w1777432869
+8../../design/DE0_CV.sv
+F../../design/DE0_CV.sv
+L0 6
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1778485336.000000
+!s107 ../../design/DE0_CV.sv|
+!s90 -reportprogress|300|../../design/DE0_CV.sv|
+!i113 1
+Z6 tCvgOpt 0
+n@d@e0_@c@v
+vfifo
+R2
+!i10b 1
+!s100 `=Rl<5neJK_991PY21NM32
+IVk@B:08BIS=8U:X1OhG_U2
+R3
+R0
+w1778484754
+8../../fifo.v
+F../../fifo.v
+L0 40
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../../fifo.v|
+!s90 -reportprogress|300|../../fifo.v|
+!i113 1
+R6
+vpll
+!s110 1778485329
+!i10b 1
+!s100 C2Qf6MBjW7J[R1U=HWzC40
+I95`g33a_di3o;nl=NDnON3
+R3
+R0
+w1775618772
+8C:/Users/user/Downloads/TDI/pll_sim/pll.vo
+FC:/Users/user/Downloads/TDI/pll_sim/pll.vo
+L0 32
+R4
+r1
+!s85 0
+31
+!s108 1778485329.000000
+!s107 C:/Users/user/Downloads/TDI/pll_sim/pll.vo|
+!s90 -reportprogress|300|C:/Users/user/Downloads/TDI/pll_sim/pll.vo|
+!i113 1
+R6
+vspi_rx
+R1
+R2
+!i10b 1
+!s100 LOWjU3Kk[Sk0]bFkXWRSQ0
+ID>KA3]]gHU5jaSh_P8jfA3
+R3
+!s105 spi_rx_sv_unit
+S1
+R0
+w1778484440
+8../../design/spi_rx.sv
+F../../design/spi_rx.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../../design/spi_rx.sv|
+!s90 -reportprogress|300|../../design/spi_rx.sv|
+!i113 1
+R6
+vTDI
+R1
+R2
+!i10b 1
+!s100 =gCl=oXa`@e1@i:d<8lk:1
+I3W2132OjYS:1I>839ba`j3
+R3
+!s105 TDI_sv_unit
+S1
+R0
+w1778462197
+8../../design/TDI.sv
+F../../design/TDI.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../../design/TDI.sv|
+!s90 -reportprogress|300|../../design/TDI.sv|
+!i113 1
+R6
+n@t@d@i
+vtestbench
+R1
+R2
+!i10b 1
+!s100 X^Z3fS24`EHSQ[]_K@aQJ0
+Iii`QRgEz@g@j:_jO_APUN0
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1778436196
+8../tb/testbench.sv
+F../tb/testbench.sv
+L0 5
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../tb/testbench.sv|
+!s90 -reportprogress|300|../tb/testbench.sv|
+!i113 1
+R6
