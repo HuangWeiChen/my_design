@@ -1,0 +1,301 @@
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+body {
+    background-color: rgb(244, 241, 238);
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 36px;
+    color: #2c3e50;
+}
+
+/* Container for products */
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 1200px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling each product item */
+.item {
+    background-color: rgb(244, 241, 238);
+    border-radius: 8px;
+    margin: 15px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+.shop{
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    background-color: rgb(226, 155, 169);
+    border: none;
+    border-radius: 60%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shop:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.shop img {
+    width: 50px;
+    height: 50px;
+}
+img {
+    max-height: 300px;
+    max-width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+p {
+    margin: 10px 0;
+    color: #34495e;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* 隱藏在螢幕外 */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    overflow: hidden;
+    transition: left 0.3s ease;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 當滑鼠移到左側時滑出 */
+.side-menu:hover {
+    left: 0;
+}
+
+/* 輸入框樣式 */
+.side-menu input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.cart{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(255, 208, 115);
+    border: none;
+    border-radius: 60%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cart img {
+    width: 50px;
+    height: 50px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .item {
+        width: 90%;
+    }
+}
+ /* 按鈕樣式 */
+ .button {
+    width: 100%;
+    padding: 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #777;
+}
+/* 背景遮罩 */
+/* 背景遮罩 */
+.alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+    backdrop-filter: blur(8px);
+}
+
+/* 彈窗容器 */
+.custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4), 
+                0px 5px 15px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    z-index: 1000;
+    display: none;
+    width: 400px;
+    font-family: 'Roboto Slab', sans-serif;
+    animation: fade-in 0.4s ease-out forwards, scale-in 0.4s ease-out forwards;
+}
+
+/* 彈窗動畫 */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* 彈窗圖標容器 */
+.alert-icon-container {
+    background: radial-gradient(circle, #00d4ff, #007bff);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.alert-icon {
+    width: 50%;
+    height: 50%;
+}
+
+/* 彈窗標題 */
+.alert-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 彈窗文字 */
+.custom-alert p {
+    margin: 0 0 20px;
+    font-size: 16px;
+    color: #dcdcdc;
+}
+
+/* 確認按鈕 */
+#alert-confirm-btn {
+    background: linear-gradient(90deg, #00d4ff, #007bff);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-transform: uppercase;
+}
+
+#alert-confirm-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.4);
+}
+.brandname {
+    font-family: 'Playfair Display', serif; /* 使品牌名稱看起來更優雅 */
+    font-size: 1.2em; /* 調整字體大小，讓品牌名更突出 */
+    font-weight: 700; /* 使用粗體來強調 */
+    color: #333; /* 深灰色，易於閱讀 */
+    text-align: center; /* 將文字置中 */
+    margin-bottom: 0.5em; /* 與其他元素保持適當間距 */
+    text-transform: uppercase; /* 全部大寫，讓品牌名稱更明顯 */
+    letter-spacing: 0.05em; /* 增加字母間距，提升閱讀體驗 */
+}
+

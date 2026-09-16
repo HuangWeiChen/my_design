@@ -1,0 +1,233 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(244, 241, 238, 0.916);
+    color: #333;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgb(236, 218, 222);
+    height: 80px;
+    width: 100%;
+}
+h1{
+    color:rgba(100, 98, 98, 0.412);
+    position: relative;
+    text-align: center;
+    top:16px;
+    margin: 0;
+    font-size: 1.8em;
+}
+header a{
+    color:rgba(100, 98, 98, 0.412);
+    text-decoration:none;
+}
+header li{
+    display: inline;
+    margin-right: 5vw;
+}
+header a:hover, .first a:hover{
+    text-decoration: underline;
+}
+header ul{
+    position:absolute;
+    right:5vw;
+    top:2.5vw;
+}
+
+.container {
+    position: relative;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    top: 90px;
+}
+
+.cart-items {
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    max-height: 200px;
+    max-width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.cart-item-details {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.cart-item-details h2 {
+    margin: 0;
+    font-size: 1em;
+    color: #cc4279;
+}
+
+.cart-item-details p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item-controls button {
+    background-color: #cc4279;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.cart-item-controls button:hover {
+    background-color: #ee97ba;
+}
+
+.cart-item-controls span {
+    margin: 0 10px;
+    font-size: 1em;
+}
+
+.cart-item-price {
+    color: #333;
+    font-size: 1em;
+}
+
+.total {
+    padding: 20px;
+    background-color: #f6d8e4;
+    text-align: right;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.total span {
+    color: #cc4279;
+    font-weight: bold;
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #cc4279;
+    color: white;
+    border: none;
+    text-align: center;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.checkout-btn:hover {
+    background-color: #ee97ba;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 1em;
+}
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+#upload-to-discord {
+    background-color: #9a6592;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#upload-to-discord:hover {
+    background-color: #984095;
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 60px;
+    }
+    h1 {
+        font-size: 1.5em;
+        top: 10px;
+    }
+    header ul {
+        right: 2vw;
+        top: 2vw;
+    }
+    .container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .cart-item img {
+        max-width: 100%;
+        max-height: 150px;
+    }
+    .cart-item-details {
+        margin: 10px 0;
+    }
+    .cart-item-controls {
+        margin-top: 10px;
+        justify-content: center;
+    }
+    .cart-item-price {
+        margin-top: 10px;
+        font-size: 0.9em;
+    }
+    .total {
+        font-size: 1em;
+        text-align: center;
+    }
+}

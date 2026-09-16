@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物車清單</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(244, 241, 238, 0.916);
+            color: #333;
+        }
+
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background-color: rgb(236, 218, 222);
+            height: 80px;
+            width: 100%;
+        }
+        h1{
+            color:rgba(100, 98, 98, 0.412);
+            position: relative;
+            text-align: center;
+            top:16px;
+            margin: 0;
+            font-size: 1.8em;
+        }
+        header a{
+            color:rgba(100, 98, 98, 0.412);
+            text-decoration:none;
+        }
+        header li{
+            display: inline;
+            margin-right: 5vw;
+        }
+        header a:hover, .first a:hover{
+            text-decoration: underline;
+        }
+        header ul{
+            position:absolute;
+            right:5vw;
+            top:2.5vw;
+        }
+
+        .container {
+            position: absolute;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            top: 90px;
+            right: 24%;
+        }
+
+
+        .cart-items {
+            padding: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item img {
+            width: 200px;
+            height: 200px;
+            border-radius: 5px;
+            
+        }
+
+        .cart-item-details {
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        .cart-item-details h2 {
+            margin: 0;
+            font-size: 1em;
+            color: #cc4279;
+        }
+
+        .cart-item-details p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .cart-item-controls {
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-item-controls button {
+            background-color: #cc4279;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+
+        .cart-item-controls button:hover {
+            background-color: #ee97ba;
+        }
+
+        .cart-item-controls span {
+            margin: 0 10px;
+            font-size: 1em;
+        }
+
+        .cart-item-price {
+            color: #333;
+            font-size: 1em;
+        }
+
+        .total {
+            padding: 20px;
+            background-color: #f6d8e4;
+            text-align: right;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .total span {
+            color: #cc4279;
+            font-weight: bold;
+        }
+
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #cc4279;
+            color: white;
+            border: none;
+            text-align: center;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .checkout-btn:hover {
+            background-color: #ee97ba;
+        }
+
+        .empty-message {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 1em;
+        }
+    </style>
+    <script>
+        function updateQuantity(button, change) {
+            const item = button.closest('.cart-item');
+            const quantitySpan = item.querySelector('.cart-item-controls span');
+            let quantity = parseInt(quantitySpan.textContent);
+            quantity = Math.max(0, quantity + change);
+            quantitySpan.textContent = quantity;
+
+            const price = parseInt(item.getAttribute('data-price'));
+            const itemPrice = item.querySelector('.cart-item-price');
+            itemPrice.textContent = `NT$${price * quantity}`;
+
+            updateTotal();
+        }
+
+        function updateTotal() {
+            let total = 0;
+            document.querySelectorAll('.cart-item').forEach(item => {
+                const quantity = parseInt(item.querySelector('.cart-item-controls span').textContent);
+                const price = parseInt(item.getAttribute('data-price'));
+                total += quantity * price;
+            });
+            document.querySelector('.total span').textContent = `NT$${total}`;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>購物車清單</h1>
+    <nav>
+        <ul>
+        <li><strong><a href="index.html">HOME</a></strong></li>
+        <li><strong><a href="items.html">SHOP</a></strong></li>
+    </ul>
+    </nav>
+    </header>
+
+    <div class="container">
+        <div class="cart-items">
+            <!-- Example item -->
+            <div class="cart-item" data-price="1000">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/ef/4e/ef4e8cfcb44871f433f86b223e2ad97b98716d65.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]" alt="商品圖片">
+                <div class="cart-item-details">
+                    <h2>商品名稱</h2>
+                </div>
+                <div class="cart-item-controls">
+                    <button onclick="updateQuantity(this, -1)">-</button>
+                    <span>1</span>
+                    <button onclick="updateQuantity(this, 1)">+</button>
+                </div>
+                <div class="cart-item-price">NT$1000</div>
+            </div>
+            
+            <div class="cart-item" data-price="1000">
+                <img src="https://lp2.hm.com/hmgoepprod?set=source[/f7/38/f7382dcc9a90eae289e9902d6a51025ece4b3354.jpg],origin[dam],category[ladies_jeans_flare],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]" alt="商品圖片">
+                <div class="cart-item-details">
+                    <h2>商品名稱</h2>
+                </div>
+                <div class="cart-item-controls">
+                    <button onclick="updateQuantity(this, -1)">-</button>
+                    <span>1</span>
+                    <button onclick="updateQuantity(this, 1)">+</button>
+                </div>
+                <div class="cart-item-price">NT$1000</div>
+            </div>
+            <!-- Add more items here -->
+        </div>
+
+        <!-- Total -->
+        <div class="total">
+            總額: <span>NT$1000</span>
+            <button id="upload-to-discord">上傳到 Discord</button>
+        </div>
+
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            // 取得學生列表
+            /*$.get('cart', function (cloth) {
+                const clothlist = $('#cart-items');
+                cloth.forEach(function (student) {
+                    clothlist.append(`<div class="cart-item"  data-price="${cloth.price}">
+                                        <img src="${cloth.pic}" alt="商品圖片">
+                                        <div class="cart-item-details">
+                                            <h2>${cloth.name}</h2>
+                                        </div>
+                                        <div class="cart-item-controls">
+                                            <button onclick="updateQuantity(this, -1)">-</button>
+                                            <span>1</span>
+                                            <button onclick="updateQuantity(this, 1)">+</button>
+                                        </div>
+                                        <div class="cart-item-price">${cloth.price}</div>
+                                        </div>
+                    `);
+                });
+            });*/
+
+            // 新增學生
+            $('#addbut').submit(function (event) {
+                event.preventDefault(); //避免跳頁
+
+                const name = $('#name').val();
+                const pic = $('#pic').val();
+                const price = $('#price').val();
+
+                $.post('cloth', { name, pic, price }, function (newStudent) {
+                    $('#cart-items').append(`<div class="cart-item"  data-price="${cloth.price}">
+                                        <img src="${cloth.pic}" alt="商品圖片">
+                                        <div class="cart-item-details">
+                                            <h2>${cloth.name}</h2>
+                                        </div>
+                                        <div class="cart-item-controls">
+                                            <button onclick="updateQuantity(this, -1)">-</button>
+                                            <span>1</span>
+                                            <button onclick="updateQuantity(this, 1)">+</button>
+                                        </div>
+                                        <div class="cart-item-price">${cloth.price}</div>
+                                        </div>`);
+                    $('#addbut').reset();
+                });
+            });
+            document.getElementById('upload-to-discord').addEventListener('click', function () {
+            const cartItems = [];
+            document.querySelectorAll('.cart-item').forEach(item => {
+                const name = item.querySelector('.cart-item-details h2').textContent;
+                const price = parseInt(item.getAttribute('data-price'));
+                const quantity = parseInt(item.querySelector('.cart-item-controls span').textContent);
+                cartItems.push({ name, price, quantity });
+            });
+
+            const webhookUrl = 'https://discord.com/api/webhooks/1319565401872662583/_hDHHGau08ueOxqMNCg3-kG-nX2PkEybiJVnEXPWwzQeLlQXxmUU7QW0yCTdp34ncoMu'; // 替換為您的 Discord Webhook URL
+
+            const payload = {
+                content: '購物車清單如下：',
+                embeds: cartItems.map(item => ({
+                    title: item.name,
+                    fields: [
+                        { name: '單價', value: `NT$${item.price}`, inline: true },
+                        { name: '數量', value: `${item.quantity}`, inline: true },
+                        { name: '總價', value: `NT$${item.price * item.quantity}`, inline: true }
+                    ]
+                }))
+            };
+
+            fetch(webhookUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('已成功上傳到 Discord！');
+                } else {
+                    alert('上傳失敗，請確認 Webhook URL 是否正確。');
+                }
+            })
+            .catch(error => {
+                console.error('Error uploading to Discord:', error);
+                alert('上傳過程中發生錯誤！');
+            });
+        });
+        });
+    </script>
+    <!-- Message for empty cart -->
+    <!-- <div class="empty-message">您的購物車是空的</div> -->
+</body>
+</html>

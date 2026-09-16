@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <link rel="stylesheet" href="items.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Our Products</h1>
+    <div class="alert-overlay"></div>
+    <div class="custom-alert">
+        <p id="alert-message">自定義彈窗訊息！</p>
+        <button id="alert-confirm-btn">確定</button>
+    </div>
+
+    <div class="items">
+        <!-- Product items dynamically added here -->
+    </div>
+    <button class="shop">
+        <img  src="home.webp" onclick="jumphome()" >
+    </button>
+    <button class="cart">
+        <img  src="cart.png" onclick="jumpcart()">
+    </button>
+    <div class="side-menu">
+        <br>價格範圍<br>
+        <input type="number" id="minPrice" placeholder="最小值">    
+        <input type="number" id="maxPrice" placeholder="最大值">
+
+        <br>來源<br>
+        NET<input type="checkbox" id="netCheckbox"><br>
+        LATIV<input type="checkbox" id="lativCheckbox"><br>
+        H&M<input type="checkbox" id="hmCheckbox"><br>
+        50%<input type="checkbox" id="discountCheckbox"><br>
+        
+        <br>性別<br>
+        男<input type="checkbox" id="maleCheckbox"><br>
+        女<input type="checkbox" id="femaleCheckbox"><br>
+
+        <br>分類<br>
+        牛仔褲<input type="checkbox" id="jeansCheckbox">
+        運動褲<input type="checkbox" id="sportsPantsCheckbox"><br>
+        西裝褲<input type="checkbox" id="suitPantsCheckbox">
+        休閒褲<input type="checkbox" id="casualPantsCheckbox"><br>
+        短褲<input type="checkbox" id="shortsCheckbox">
+        褲子<input type="checkbox" id="pantsCheckbox"><br>
+        polo系列<input type="checkbox" id="poloCheckbox">
+        T恤<input type="checkbox" id="tshirtCheckbox"><br>
+        帽T<input type="checkbox" id="hoodieCheckbox">
+        針織衫<input type="checkbox" id="knitwearCheckbox"><br>
+        襯衫<input type="checkbox" id="shirtCheckbox">
+        大衣<input type="checkbox" id="coatCheckbox"><br>
+        外套<input type="checkbox" id="jacketCheckbox">
+        背心<input type="checkbox" id="vestCheckbox"><br>
+        洋裝<input type="checkbox" id="dressCheckbox">
+        裙子<input type="checkbox" id="skirtCheckbox"><br>
+        上衣<input type="checkbox" id="topCheckbox">
+        襪子<input type="checkbox" id="socksCheckbox"><br>
+        其他<input type="checkbox" id="othersCheckbox"><br>
+
+        <input type="button" value="套用" class="button" id="applyButton"><br>
+    </div>
+    
+    <script>
+        let products = [];
+
+        // Fetch data from net_products.json
+        fetch('ALL.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(fetchedProducts => {
+                products = fetchedProducts;
+                displayProducts(products); // Initially display all products
+            })
+            .catch(error => {
+                console.error('Error fetching the products:', error);
+            });
+
+        // Function to display products
+        function displayProducts(productsToDisplay) {
+            const container = document.querySelector('.items');
+            container.innerHTML = ''; // Clear existing items
+
+            productsToDisplay.forEach(product => {
+                const item = document.createElement('div');
+                item.className = 'item';
+
+                item.innerHTML = `
+                    <p class = "brandname">${product.brand}</p>
+                    <img src="${product.img_src}" alt="${product.clothname}">
+                    <p>${product.clothname}</p>
+                    <p class="price">${product.price}</p>
+                    <a href="${product.buy_href}" target="_blank">官網購買</a>
+                    <button onclick = 'addToCart({name: "${product.clothname}", img: "${product.img_src}",price: "${product.price}",buy_href: "${product.buy_href}"})'>加入購物清單</button>
+                `;
+
+                container.appendChild(item);
+            });
+        }
+        function jumphome(){
+            location.href = "index.html";
+        }
+        function jumpcart(){
+            location.href = "cart.html";
+        }
+        // Apply filters when the button is clicked
+        document.getElementById('applyButton').addEventListener('click', function() {
+            const minPrice = parseFloat(document.getElementById('minPrice').value.replace('NT$', '').trim()) || 0;
+            const maxPrice = parseFloat(document.getElementById('maxPrice').value.replace('NT$', '').trim()) || Infinity;
+
+            const netChecked = document.getElementById('netCheckbox').checked;
+            const lativChecked = document.getElementById('lativCheckbox').checked;
+            const hmChecked = document.getElementById('hmCheckbox').checked;
+            const discountChecked = document.getElementById('discountCheckbox').checked;
+
+            const maleChecked = document.getElementById('maleCheckbox').checked;
+            const femaleChecked = document.getElementById('femaleCheckbox').checked;
+
+            const categories = [
+                { id: 'jeansCheckbox', name: '牛仔褲' },
+                { id: 'sportsPantsCheckbox', name: '運動褲' },
+                { id: 'suitPantsCheckbox', name: '西裝褲' },
+                { id: 'casualPantsCheckbox', name: '休閒褲' },
+                { id: 'shortsCheckbox', name: '短褲' },
+                { id: 'pantsCheckbox', name: '褲子' },
+                { id: 'poloCheckbox', name: 'polo系列' },
+                { id: 'tshirtCheckbox', name: 'T恤' },
+                { id: 'hoodieCheckbox', name: '帽T' },
+                { id: 'knitwearCheckbox', name: '針織衫' },
+                { id: 'shirtCheckbox', name: '襯衫' },
+                { id: 'coatCheckbox', name: '大衣' },
+                { id: 'jacketCheckbox', name: '外套' },
+                { id: 'vestCheckbox', name: '背心' },
+                { id: 'dressCheckbox', name: '洋裝' },
+                { id: 'skirtCheckbox', name: '裙子' },
+                { id: 'topCheckbox', name: '上衣' },
+                { id: 'socksCheckbox', name: '襪子' },
+                { id: 'othersCheckbox', name: '其他' },
+            ];
+
+            const selectedCategories = categories
+                .filter(category => document.getElementById(category.id).checked)
+                .map(category => category.name);
+
+            const filteredProducts = products.filter(product => {
+                let price;
+                if(product.brand === 'net'||product.brand === '50percent'){
+                    price = parseFloat(product.price.replace('NT.', '').trim());
+                }
+                else if(product.brand === 'lativ'||product.brand === 'H&M'){
+                    price = parseFloat(product.price.replace('NT$', '').trim());
+                }
+                else{
+                    price=-1;
+                }
+                
+                const isInPriceRange = price >= minPrice && price <= maxPrice;
+
+                // Check if the product matches the selected filters
+                const isFromNet = netChecked && product.brand === 'net';
+                const isFromLativ = lativChecked && product.brand === 'lativ';
+                const isFromHM = hmChecked && product.brand === 'H&M';
+                const isDiscounted = discountChecked && product.brand === '50percent';
+
+                const matchesGender = (!maleChecked && !femaleChecked) || 
+                                      (maleChecked && product.gender === '男') || 
+                                      (femaleChecked && product.gender === '女');
+
+                const matchesCategory = selectedCategories.length === 0 || 
+                                        selectedCategories.includes(product.category);
+
+                return isInPriceRange && 
+                       (isFromNet || isFromLativ || isFromHM || isDiscounted || 
+                        (!netChecked && !lativChecked && !hmChecked && !discountChecked)) &&
+                       matchesGender &&
+                       matchesCategory;
+            });
+
+            displayProducts(filteredProducts); // Display filtered products
+        });
+        function customAlert(message) {
+            const overlay = document.querySelector('.alert-overlay');
+            const alertBox = document.querySelector('.custom-alert');
+            const alertMessage = document.getElementById('alert-message');
+            const confirmBtn = document.getElementById('alert-confirm-btn');
+            // 設定彈窗訊息
+            alertMessage.textContent = message;
+            // 顯示彈窗和遮罩層
+            overlay.style.display = 'block';
+            alertBox.style.display = 'block';
+
+            // 添加關閉事件
+            confirmBtn.onclick = closeAlert;
+        }
+
+        function closeAlert() {
+            const overlay = document.querySelector('.alert-overlay');
+            const alertBox = document.querySelector('.custom-alert');
+
+            overlay.style.display = 'none';
+            alertBox.style.display = 'none';
+        }
+
+        function addToCart(product) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            customAlert(`${product.name} 已加入購物車！`);
+        }
+        item.querySelector('button').addEventListener('click', () => addToCart(product));
+    </script>
+</body>
+
+</html>

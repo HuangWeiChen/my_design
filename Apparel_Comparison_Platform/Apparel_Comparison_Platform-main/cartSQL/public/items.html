@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <style>
+        /* Basic Reset */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: rgb(244, 241, 238);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 36px;
+            color: #2c3e50;
+        }
+
+        /* Container for products */
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px auto;
+            padding: 10px;
+            max-width: 1200px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling each product item */
+        .item {
+            background-color: rgb(244, 241, 238);
+            border-radius: 8px;
+            margin: 15px;
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s ease;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            max-height: 300px;
+            max-width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        p {
+            margin: 10px 0;
+            color: #34495e;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px; /* 隱藏在螢幕外 */
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            overflow: hidden;
+            transition: left 0.3s ease;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 當滑鼠移到左側時滑出 */
+        .side-menu:hover {
+            left: 0;
+        }
+
+        /* 輸入框樣式 */
+        .side-menu input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .cart{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgb(255, 208, 115);
+            border: none;
+            border-radius: 60%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cart:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .cart img {
+            width: 50px;
+            height: 50px;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .items {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .item {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .item {
+                width: 90%;
+            }
+        }
+         /* 按鈕樣式 */
+         .button {
+            width: 100%;
+            padding: 10px;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Our Products</h1>
+    <div class="items">
+        <!-- Product items dynamically added here -->
+    </div>
+    <button class="cart">
+        <img  src="cart.png" onclick="jumpcart()">
+    </button>
+    <div class="side-menu">
+        <br>價格範圍<br>
+        <input type="number" id="minPrice" placeholder="最小值">    
+        <input type="number" id="maxPrice" placeholder="最大值">
+
+        <br>來源<br>
+        NET<input type="checkbox" id="netCheckbox"><br>
+        LATIV<input type="checkbox" id="lativCheckbox"><br>
+        H&M<input type="checkbox" id="hmCheckbox"><br>
+        50%<input type="checkbox" id="discountCheckbox"><br>
+        
+        <br>性別<br>
+        男<input type="checkbox" id="maleCheckbox"><br>
+        女<input type="checkbox" id="femaleCheckbox"><br>
+
+        <br>分類<br>
+        牛仔褲<input type="checkbox" id="jeansCheckbox">
+        運動褲<input type="checkbox" id="sportsPantsCheckbox"><br>
+        西裝褲<input type="checkbox" id="suitPantsCheckbox">
+        休閒褲<input type="checkbox" id="casualPantsCheckbox"><br>
+        短褲<input type="checkbox" id="shortsCheckbox">
+        褲子<input type="checkbox" id="pantsCheckbox"><br>
+        polo系列<input type="checkbox" id="poloCheckbox">
+        T恤<input type="checkbox" id="tshirtCheckbox"><br>
+        帽T<input type="checkbox" id="hoodieCheckbox">
+        針織衫<input type="checkbox" id="knitwearCheckbox"><br>
+        襯衫<input type="checkbox" id="shirtCheckbox">
+        大衣<input type="checkbox" id="coatCheckbox"><br>
+        外套<input type="checkbox" id="jacketCheckbox">
+        背心<input type="checkbox" id="vestCheckbox"><br>
+        洋裝<input type="checkbox" id="dressCheckbox">
+        裙子<input type="checkbox" id="skirtCheckbox"><br>
+        上衣<input type="checkbox" id="topCheckbox">
+        襪子<input type="checkbox" id="socksCheckbox"><br>
+        其他<input type="checkbox" id="othersCheckbox"><br>
+
+        <input type="button" value="套用" class="button" id="applyButton"><br>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        let products = [];
+
+        // Fetch data from net_products.json
+        fetch('ALL.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(fetchedProducts => {
+                products = fetchedProducts;
+                //displayProducts(products); // Initially display all products
+            })
+            .catch(error => {
+                console.error('Error fetching the products:', error);
+            });
+
+        // Function to display products
+        function displayProducts(productsToDisplay) {
+            const container = document.querySelector('.items');
+            container.innerHTML = ''; // Clear existing items
+
+            productsToDisplay.forEach(product => {
+                const item = document.createElement('div');
+                item.className = 'item';
+
+                item.innerHTML = `
+                    <img  class = "pic" src="${product.img_src}" alt="${product.clothname}">
+                    <p class = "name">${product.clothname}</p>
+                    <p class="price">${product.price}</p>
+                    <a href="${product.buy_href}" target="_blank">購買</a>
+                    <button type="submit">加入購物清單</button>
+                `;
+
+                container.appendChild(item);
+            });
+        }
+        function jumpcart(){
+            location.href = "cart.html";
+        }
+        // Apply filters when the button is clicked
+        document.getElementById('applyButton').addEventListener('click', function() {
+            const minPrice = parseFloat(document.getElementById('minPrice').value.replace('NT$', '').trim()) || 0;
+            const maxPrice = parseFloat(document.getElementById('maxPrice').value.replace('NT$', '').trim()) || Infinity;
+
+            const netChecked = document.getElementById('netCheckbox').checked;
+            const lativChecked = document.getElementById('lativCheckbox').checked;
+            const hmChecked = document.getElementById('hmCheckbox').checked;
+            const discountChecked = document.getElementById('discountCheckbox').checked;
+
+            const maleChecked = document.getElementById('maleCheckbox').checked;
+            const femaleChecked = document.getElementById('femaleCheckbox').checked;
+
+            const categories = [
+                { id: 'jeansCheckbox', name: '牛仔褲' },
+                { id: 'sportsPantsCheckbox', name: '運動褲' },
+                { id: 'suitPantsCheckbox', name: '西裝褲' },
+                { id: 'casualPantsCheckbox', name: '休閒褲' },
+                { id: 'shortsCheckbox', name: '短褲' },
+                { id: 'pantsCheckbox', name: '褲子' },
+                { id: 'poloCheckbox', name: 'polo系列' },
+                { id: 'tshirtCheckbox', name: 'T恤' },
+                { id: 'hoodieCheckbox', name: '帽T' },
+                { id: 'knitwearCheckbox', name: '針織衫' },
+                { id: 'shirtCheckbox', name: '襯衫' },
+                { id: 'coatCheckbox', name: '大衣' },
+                { id: 'jacketCheckbox', name: '外套' },
+                { id: 'vestCheckbox', name: '背心' },
+                { id: 'dressCheckbox', name: '洋裝' },
+                { id: 'skirtCheckbox', name: '裙子' },
+                { id: 'topCheckbox', name: '上衣' },
+                { id: 'socksCheckbox', name: '襪子' },
+                { id: 'othersCheckbox', name: '其他' },
+            ];
+
+            const selectedCategories = categories
+                .filter(category => document.getElementById(category.id).checked)
+                .map(category => category.name);
+
+            const filteredProducts = products.filter(product => {
+                let price;
+                if(product.brand === 'net'||product.brand === '50percent'){
+                    price = parseFloat(product.price.replace('NT.', '').trim());
+                }
+                else if(product.brand === 'lativ'||product.brand === 'H&M'){
+                    price = parseFloat(product.price.replace('NT$', '').trim());
+                }
+                else{
+                    price=-1;
+                }
+                
+                const isInPriceRange = price >= minPrice && price <= maxPrice;
+
+                // Check if the product matches the selected filters
+                const isFromNet = netChecked && product.brand === 'net';
+                const isFromLativ = lativChecked && product.brand === 'lativ';
+                const isFromHM = hmChecked && product.brand === 'H&M';
+                const isDiscounted = discountChecked && product.brand === '50percent';
+
+                const matchesGender = (!maleChecked && !femaleChecked) || 
+                                      (maleChecked && product.gender === '男') || 
+                                      (femaleChecked && product.gender === '女');
+
+                const matchesCategory = selectedCategories.length === 0 || 
+                                        selectedCategories.includes(product.category);
+
+                return isInPriceRange && 
+                       (isFromNet || isFromLativ || isFromHM || isDiscounted || 
+                        (!netChecked && !lativChecked && !hmChecked && !discountChecked)) &&
+                       matchesGender &&
+                       matchesCategory;
+            });
+
+            displayProducts(filteredProducts); // Display filtered products
+        });
+
+        $(document).ready(function () {
+            // 取得學生列表
+            $.get('cart', function (students) {
+                const studentList = $('#items');
+                students.forEach(function (cloth) {
+                    studentList.append(`<div class="cart-item"  data-price="${cloth.price}">
+                                        <img src="${cloth.pic}" alt="商品圖片">
+                                        <div class="cart-item-details">
+                                            <h2>${cloth.name}</h2>
+                                        </div>
+                                        <div class="cart-item-controls">
+                                            <button onclick="updateQuantity(this, -1)">-</button>
+                                            <span>1</span>
+                                            <button onclick="updateQuantity(this, 1)">+</button>
+                                        </div>
+                                        <div class="cart-item-price">${cloth.price}</div>
+                                        </div>
+                    `);
+                });
+            });
+
+            // 新增學生
+            $('#addbut').submit(function (event) {
+                event.preventDefault(); //避免跳頁
+
+                const name = $('#name').val();
+                const pic = $('#pic').val();
+                const price = $('#price').val();
+                console.log(name);
+                console.log(pic);
+                console.log(price);
+                $.post('cloth', { name, pic, price }, function (newStudent) {
+                    $('#items').append(`<div class="cart-item"  data-price="${cloth.price}">
+                                        <img src="${cloth.pic}" alt="商品圖片">
+                                        <div class="cart-item-details">
+                                            <h2>${cloth.name}</h2>
+                                        </div>
+                                        <div class="cart-item-controls">
+                                            <button onclick="updateQuantity(this, -1)">-</button>
+                                            <span>1</span>
+                                            <button onclick="updateQuantity(this, 1)">+</button>
+                                        </div>
+                                        <div class="cart-item-price">${cloth.price}</div>
+                                        </div>`);
+                    $('#addbut').reset();
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

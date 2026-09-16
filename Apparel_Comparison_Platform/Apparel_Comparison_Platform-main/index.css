@@ -1,0 +1,348 @@
+body{
+    background-color: rgb(244, 241, 238);
+    font-family: 'Roboto Slab', serif;
+}
+h2 {
+    margin: 20px 0;
+    color: #5a5a5a;
+    font-size: 24px;
+    text-align: center;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+footer {
+    clear: both; /* 確保 footer 不被其他浮動元素影響 */
+    margin-top: 20px; /* 增加 footer 與內容間距 */
+    padding: 15px 10px;
+    background-color: rgb(244, 241, 238);
+    border: 3px rgb(158, 118, 138) dashed;
+    position: fixed; /* 小螢幕固定在底部 */
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+section{
+    background-color: rgb(244, 241, 238);
+    padding: 30px 20px 30px 40px;
+    margin:30px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgb(244, 241, 238);
+    height: 80px;
+    width: 100%;
+}
+h1{
+    color:rgba(100, 98, 98, 0.412);
+    position: relative;
+    text-align: center;
+    top: 10px;
+}
+header a{
+    color:rgba(100, 98, 98, 0.412);
+    text-decoration:none;
+}
+header li{
+    display: inline;
+    margin-right: 5vw;
+}
+header a:hover, .first a:hover{
+    text-decoration: underline;
+}
+header ul{
+    position:absolute;
+    right:5vw;
+    top:3vw;
+}
+
+.first{
+    background-image:url("homebackground.webp");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    margin-top: 100px;
+    padding: 20px;
+    height: 300px;
+}
+.first a{
+    margin-top: 30px;
+    color:black;
+    text-decoration: none;
+    border:2px solid rgb(145, 101, 144);
+    padding:7px 20px;
+    border-radius: 5px;
+
+}
+.second {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message{
+    padding: 60px 0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.message p{
+    margin-bottom: 20px;
+}
+.message input,.message button{
+    background-color: transparent;
+    color:rgb(20, 19, 19);
+    border:2px solid rgb(130, 120, 85);
+    padding:9px;
+    border-radius: 10px;
+}
+.message input{
+    width:200px;
+    margin-right: 20px;
+}
+.message button{
+    width: 80px;
+    cursor: pointer;
+}
+.cart{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(255, 208, 115);
+    border: none;
+    border-radius: 60%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 20;
+}
+
+.cart:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cart img {
+    width: 50px;
+    height: 50px;
+}
+.shop{
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    background-color: rgb(226, 155, 169);
+    border: none;
+    border-radius: 60%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 20;
+}
+
+.shop:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.shop img {
+    width: 100px;
+    height: 100px;
+}
+.second {
+    color: black;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    height:150vh;
+    flex-direction:row;
+    align-items: center;
+    
+}
+.second {
+    position: relative; /* 新增 */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.item {
+    position: relative; /* 設置相對定位，讓子元素絕對定位可參考父層 */
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.label {
+    position: absolute;
+    top: 10px; /* 與圖片頂端距離 */
+    left: 10px; /* 與圖片左邊距離 */
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transform: rotate(-10deg); /* 斜斜的效果 */
+    z-index: 10;
+}
+.label:hover {
+    background: linear-gradient(45deg, #e74c3c, #f39c12);
+    transform: rotate(0deg) scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+    height: 300px;
+    max-width: 100%;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.item img:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
+.item p {
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin: 10px 0;
+}
+
+.item a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(90deg, #b8b1a9, #d6cfc4); /* 莫蘭迪灰紫漸層 */
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.item a:hover {
+    background: linear-gradient(45deg, #d6cfc4, #e7e3df); /* 更亮的漸層，強調互動效果 */
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.logo{
+    color:rgba(100, 98, 98, 0.412);
+    position: absolute;
+    left: 0.5vw;
+    top: 0.3vw;
+    width: 150px;
+    height: 150px;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* 縮小全局字體大小 */
+    }
+
+    header {
+        height: 60px; /* 調整 header 高度 */
+    }
+
+    header h1 {
+        font-size: 18px; /* 縮小標題字體 */
+        top: 5px; /* 調整位置 */
+    }
+
+    header ul {
+        right: 2vw; /* 調整導航菜單間距 */
+        top: 2vw;
+    }
+
+    header li {
+        margin-right: 3vw; /* 縮小導航項目間距 */
+    }
+
+    .first {
+        margin-top: 70px; /* 調整 section 距離 header */
+        height: 200px; /* 減少高度 */
+    }
+
+    .second {
+        padding: 10px;
+        gap: 10px; /* 減少項目間距 */
+    }
+
+    .item {
+        width: 100%; /* 調整商品項目寬度 */
+        padding: 10px; /* 減少內邊距 */
+    }
+
+    .item img {
+        height: auto;
+        max-height: 200px; /* 限制圖片高度 */
+    }
+
+    .cart, .shop {
+        width: 60px; /* 縮小按鈕大小 */
+        height: 60px;
+        bottom: 15px;
+        right: 15px;
+        z-index: 20;
+    }
+
+    .cart img{
+        width: 40px; /* 縮小圖片 */
+        height: 40px;
+    }
+    .shop img {
+        width: 80px; /* 縮小圖片 */
+        height: 80px;
+    }
+    .shop {
+        display: flex; /* 確保按鈕顯示 */
+        bottom: 90px; /* 調整按鈕距底部的位置 */
+        right: 14.5px; /* 調整按鈕距右邊的位置 */
+        width: 60px; /* 縮小按鈕尺寸以適應小螢幕 */
+        height: 60px;
+    }
+}
